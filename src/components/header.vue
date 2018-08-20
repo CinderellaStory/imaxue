@@ -1,6 +1,6 @@
 <template>
 <div class="header">
-    <div class="ov">
+    <div class="top ov">
       <div class="nav-icon">
           <i class="iconfont icon-ego-menu"></i>
           <a href=""><img src="../assets/logo.png"></a>
@@ -15,6 +15,9 @@
           <a href="">注册</a>
         </div>
       </div>
+    </div>
+    <div class="banner">
+      <img src="../assets/banner03.png" alt="">
     </div>
 </div>
 </template>
@@ -38,7 +41,7 @@ export default {
 .ov{
   overflow: hidden;
 }
-  .header{
+  .top{
     width: 100%;
     background: #000;
     height: 84px;
