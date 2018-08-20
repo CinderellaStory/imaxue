@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
@@ -18,6 +17,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.mw{
+  min-width: 1200px;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+  color: #fff;
 }
 </style>
