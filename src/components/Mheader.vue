@@ -5,7 +5,7 @@
           <i class="iconfont icon-ego-menu"></i>
           <a href=""><img src="../assets/logo.png"></a>
       </div>
-      <div class="mw ov">
+      <div class="ov">
         <div class="Search">
             <input type="text" placeholder="请输入搜索内容">
         </div>
@@ -16,30 +16,20 @@
         </div>
       </div>
     </div>
-    <div class="banner">
-      <img src="../assets/banner03.png" alt="">
-    </div>
 </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.fr{
-  float: right;
-}
-.ov{
-  overflow: hidden;
+
+h3{
+  color: #333;
+  font-weight: normal;
+  margin: 20px 0;
 }
   .top{
     width: 100%;
@@ -61,7 +51,7 @@ export default {
   }
 .Search{
   float: left;
-  width: 40%;
+  line-height: 84px;
 }
 .Search input{
   width: 700px;
@@ -73,5 +63,9 @@ export default {
 }
 .sign{
      font-size: 14px;
+     width: 200px;
+     text-align: right;
+     line-height: 84px;
 }
+
 </style>

@@ -18,16 +18,34 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+body{
+  background: #d7d7d7;
+}
+.bg{
+  background:#fff;
+}
 *{
   margin: 0;
   padding: 0;
 }
 .mw{
-  min-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
 }
 a{
   text-decoration: none;
   color: #fff;
+}
+ul{
+  list-style: none;
+}
+.fr{
+  float: right;
+}
+.fl{
+   float: left;
+}
+.ov{
+  overflow: hidden;
 }
 </style>
