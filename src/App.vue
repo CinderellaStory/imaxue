@@ -31,6 +31,7 @@ body{
 .mw{
   width: 1200px;
   margin: 0 auto;
+  /* border: 1px solid red; */
 }
 a{
   text-decoration: none;

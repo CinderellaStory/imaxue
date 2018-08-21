@@ -1,7 +1,7 @@
 <template>
  <div class="search">
      <Mheader></Mheader>
-    <div class="mw">
+    <div class="mw ov">
         <div class="search-container">
             <p class="searchabout">为你搜索到110条相关内容</p>
             <ul class="ov">
@@ -66,12 +66,6 @@ import Mheader from '@/components/Mheader'
             name:'Vue组件之间的通信',
             price:'19.99',
             number:'1200'
-            },
-           {
-            user:'小任性',
-            name:'Vue组件之间的通信',
-            price:'19.99',
-            number:'1200'
             }
         ],
         items:[
@@ -126,17 +120,17 @@ import Mheader from '@/components/Mheader'
     .search-container{
         margin-top: 50px;
         float: left;
-        width: 80%;
+        width: 70%;
         ul{
             li{
                 text-align: left;
-                width: 780px;
+                width: 740px;
                 height: 140px;
                 background: #fff;
                 float: left;
                 border-radius: 20px;
                 padding: 20px;
-                margin: 20px 20px 20px 0;
+                margin: 20px 0 20px 0;
                 display: flex;
                 align-items: center;
                 .fl{
@@ -156,8 +150,8 @@ import Mheader from '@/components/Mheader'
         }
     }
     .aside-course{
-        width: 20%;
-        float: left;
+        width: 30%;
+        float: right;
         margin-top: 45px;
         ul{
             li{
@@ -168,8 +162,8 @@ import Mheader from '@/components/Mheader'
                 overflow: hidden;
                 display: flex;
                 align-items: center;
-                padding: 0 20px;
-                margin: 20px;
+                padding: 0 0 0 20px;
+                margin: 20px 0 0 0;
                 .course-img{
                     float: left;
                     img{
