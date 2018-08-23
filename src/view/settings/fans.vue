@@ -1,7 +1,7 @@
 <template>
  <div class="fans">
      <Mheader></Mheader>
-     <div class="mw">
+     <div class="mw content">
          <div class="nav">
             <ul>
                 <router-link tag="li" to="follows">我的关注</router-link>
@@ -10,7 +10,7 @@
                 <router-link tag="li" to="study">最近学习</router-link>
             </ul>
         </div>
-        <div class="fansinfo">
+        <div class="fansinfo ov">
             <ul>
                 <li v-for="(fan,index) in fans" :key="index">
                     <div class="userlogo fl"><img src="../../assets/userlogo.png" alt=""></div>
@@ -84,6 +84,16 @@ Mheader
 </script>
 
 <style scoped lang="less">
+.mw{
+    width: 1000px;
+    margin: 45px auto;
+}
+
+.content{
+  background: #fff;
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px 60px 30px;
+  }
 .nav{
     margin: 50px 0 30px 0;
     ul{
