@@ -105,6 +105,7 @@ import Mheader from '@/components/Mheader'
 .nav{
     margin: 50px 0 30px 0;
     ul{
+        overflow: hidden;
         border-bottom:1px solid #BBBBBB; 
         li{
             float: left;
@@ -123,7 +124,6 @@ import Mheader from '@/components/Mheader'
             box-shadow: 0 2px 8px 2px rgba(0,0,0,.1);
            margin-bottom: 20px;
             padding: 20px;
-            overflow: hidden;
             .times{
                  width: 100%;
                  text-align: left;
