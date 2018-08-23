@@ -11,6 +11,13 @@ export default {
 </script>
 
 <style>
+.ml15{
+  margin-left: 15px;
+}
+a,p,body{
+   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+   font-size: 14px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,7 +26,7 @@ export default {
   color: #2c3e50;
 }
 body{
-  background: #d7d7d7;
+  background: #f7f7f7;
 }
 .bg{
   background:#fff;

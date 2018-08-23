@@ -1,6 +1,7 @@
 <template>
  <div class="home">
      <Mheader></Mheader>
+     <NavBar></NavBar>
     <div class="banner">
       <img src="../assets/banner03.png" alt="">
     </div>
@@ -112,6 +113,7 @@
 
 <script type="text/javascript">
 import Mheader from '@/components/Mheader'
+import NavBar from '@/components/NavBar'
 
 export default {
   name: 'HelloWorld',
@@ -194,7 +196,7 @@ export default {
     }
   },
   components:{
-      Mheader
+      Mheader,NavBar
   }
 }
 </script>

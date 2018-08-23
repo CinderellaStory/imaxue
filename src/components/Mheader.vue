@@ -3,7 +3,7 @@
     <div class="top ov">
       <div class="nav-icon">
           <i class="iconfont icon-ego-menu"></i>
-          <a href=""><img src="../assets/logo.png"></a>
+          <router-link to="../../home"><img src="../assets/logo.png"></router-link>
       </div>
       <div class="ov">
         <div class="Search">

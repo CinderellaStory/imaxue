@@ -17,3 +17,7 @@ new Vue({
     components: { App },
     template: '<App/>'
 })
+
+Vue.filter('getYMD', function(input) {
+    return input.split(' ')[0];
+})
