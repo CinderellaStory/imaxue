@@ -4,10 +4,10 @@
      <div class="mw">
          <div class="nav">
             <ul>
-                <router-link tag="li" class="active">全部</router-link>
-                <router-link tag="li">已购买</router-link>
-                <router-link tag="li">未支付</router-link>
-                <router-link tag="li">已取消</router-link>
+                <router-link tag="li" class="active" to="">全部</router-link>
+                <router-link tag="li" to="">已购买</router-link>
+                <router-link tag="li" to="">未支付</router-link>
+                <router-link tag="li" to="">已取消</router-link>
             </ul>
         </div>
         <div class="followsinfo">
@@ -105,7 +105,6 @@ import Mheader from '@/components/Mheader'
 .nav{
     margin: 50px 0 30px 0;
     ul{
-        overflow: hidden;
         border-bottom:1px solid #BBBBBB; 
         li{
             float: left;
