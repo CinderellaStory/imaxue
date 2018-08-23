@@ -7,6 +7,12 @@ import fans from '@/view/settings/fans'
 import follows from '@/view/settings/follows'
 import collect from '@/view/settings/collect'
 import study from '@/view/settings/study'
+import order from '@/view/settings/order'
+import my from '@/view/settings/my'
+import teachers from '@/view/settings/teachers'
+import userinfo from '@/view/settings/userinfo'
+import accountbind from '@/view/settings/accountbind'
+import modifypsd from '@/view/settings/modifypsd'
 
 Vue.use(Router)
 
@@ -42,6 +48,30 @@ export default new Router({
         {
             path: '/settings/study',
             component: study
+        },
+        {
+            path: '/settings/order',
+            component: order
+        },
+        {
+            path: '/settings/my',
+            component: my
+        },
+        {
+            path: '/settings/teachers',
+            component: teachers
+        },
+        {
+            path: '/settings/userinfo',
+            component: userinfo
+        },
+        {
+            path: '/settings/accountbind',
+            component: accountbind
+        },
+        {
+            path: '/settings/modifypsd',
+            component: modifypsd
         }
     ]
 })

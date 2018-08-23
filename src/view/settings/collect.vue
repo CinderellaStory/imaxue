@@ -1,5 +1,5 @@
 <template>
- <div class="study">
+ <div class="collect">
      <Mheader></Mheader>
      <div class="mw">
          <div class="nav">

@@ -14,6 +14,9 @@ export default {
 .ml15{
   margin-left: 15px;
 }
+button{
+  outline: none;
+}
 a,p,body{
    font-family: 'Avenir', Helvetica, Arial, sans-serif;
    font-size: 14px;

@@ -9,14 +9,14 @@
      </ul>
        <!-- <h3>个人中心</h3> -->
      <ul>
-       <router-link tag="li" to="follows">我的主页</router-link>
-       <router-link tag="li" to="follows">讲师主页</router-link>
+       <router-link tag="li" to="../../settings/my">我的主页</router-link>
+       <router-link tag="li" to="../../settings/teachers">讲师主页</router-link>
        <router-link tag="li" to="../../settings/follows">我的关注</router-link>
        <router-link tag="li" to="../../settings/fans">我的粉丝</router-link>
        <router-link tag="li" to="../../settings/collect">我的收藏</router-link>
-       <router-link tag="li" to="follows">个人信息</router-link>
-       <router-link tag="li" to="follows">账号绑定</router-link>
-       <router-link tag="li" to="follows">我的订单</router-link>
+       <router-link tag="li" to="../../settings/userinfo">个人信息</router-link>
+       <router-link tag="li" to="../../settings/accountbind">账号绑定</router-link>
+       <router-link tag="li" to="../../settings/order">我的订单</router-link>
        <router-link tag="li" to="../../settings/study">最近学习</router-link>
      </ul>
  </div>
