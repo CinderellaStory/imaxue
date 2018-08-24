@@ -13,6 +13,7 @@ import teachers from '@/view/settings/teachers'
 import userinfo from '@/view/settings/userinfo'
 import accountbind from '@/view/settings/accountbind'
 import modifypsd from '@/view/settings/modifypsd'
+import myhome from '@/view/settings/myhome'
 
 Vue.use(Router)
 
@@ -72,6 +73,10 @@ export default new Router({
         {
             path: '/settings/modifypsd',
             component: modifypsd
+        },
+        {
+            path: '/settings/myhome',
+            component: myhome
         }
     ]
 })

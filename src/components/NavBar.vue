@@ -9,7 +9,7 @@
      </ul>
        <!-- <h3>个人中心</h3> -->
      <ul>
-       <router-link tag="li" to="../../settings/my">我的主页</router-link>
+       <router-link tag="li" to="../../settings/myhome">我的主页</router-link>
        <router-link tag="li" to="../../settings/teachers">讲师主页</router-link>
        <router-link tag="li" to="../../settings/follows">我的关注</router-link>
        <router-link tag="li" to="../../settings/fans">我的粉丝</router-link>

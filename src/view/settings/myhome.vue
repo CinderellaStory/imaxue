@@ -1,15 +1,42 @@
 <template>
- <div class="collect"> 
+ <div class="myhome">
      <Mheader></Mheader>
+     <div class="myhome-header">
+        <div class="mw ov">
+             <div class="myhome-left fl">
+                <div class="logo fl"><img src="../../assets/userlogo.png" alt=""></div>
+                <div class="myhome-infot fl">
+                    <p class="username">请叫我小任性</p>
+                    <p class="address">
+                        <i class="iconfont icon-zuihoudinggao-"></i>
+                        <!-- <i class="iconfont icon-nanxing"></i> -->   
+                        <!-- 男性icon -->
+                        <span>广东-深圳市</span>
+                        <span>Web前端工程师</span>
+                    </p>
+                    <p class="intr">学无止境，回头是岸。</p>
+                </div>
+            </div>
+            <div class="myhome-right fr">
+                <div class="items">
+                    <p class="nummber">20</p>
+                    <p>关注</p>
+                </div>
+                <div class="items">
+                    <p class="nummber">20</p>
+                    <p>粉丝</p>
+                </div>
+                <div class="items setting-btn">
+                    <router-link to='userinfo'>
+                        <i class="iconfont icon-msnui-conf-bold"></i>
+                        <span>个人设置</span>
+                    </router-link>
+                </div>
+            </div>
+         </div>
+     </div>
      <div class="mw content">
-         <div class="nav">
-            <ul>
-                <router-link tag="li" to="follows">我的关注</router-link>
-                <router-link tag="li" to="fans">我的粉丝</router-link>
-                <router-link tag="li" to="collect">我的收藏</router-link>
-                <router-link tag="li" to="study" class="active">最近学习</router-link>
-            </ul>
-        </div>
+         <div class="title">最近学习</div>
         <div class="followsinfo ov">
             <ul>
                 <li v-for="(fan,index) in fans" :key="index">
@@ -87,7 +114,7 @@ import Mheader from '@/components/Mheader'
       }
   },
    components: {
-    Mheader
+       Mheader
    }
  }
 </script>
@@ -97,29 +124,75 @@ import Mheader from '@/components/Mheader'
     width: 1000px;
     margin: 45px auto;
 }
-
 .content{
   background: #fff;
   box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.1);
   padding: 20px 30px 60px 30px;
   }
-
-.nav{
-    margin: 50px 0 30px 0;
-    ul{
-        overflow: hidden;
-        border-bottom:1px solid #BBBBBB; 
-        li{
-            float: left;
-            width: 100px;
-            cursor: pointer;
-            padding-bottom: 10px;
-            &.active{
-                border-bottom: 2px solid red;
+.myhome{
+    .myhome-header{
+        color: #fff;
+        background: url(../../assets/temp1.png)center top no-repeat;background-size: cover;
+        height: 150px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .myhome-left{
+        .logo{
+            margin-right: 30px;
+            img{
+                border: 3px solid #fff;
+                border-radius: 50%;
+                width: 90px;
+                height: 90px;
+            }
+            }
+            p{
+                line-height: 32px;
+                text-align: left;
+            }
+            span{
+                margin-left: 10px;
+            }
+        }
+        .myhome-right{
+            width: 34%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            .items{
+                float: left;
+                margin-left: 50px;
+                p{
+                    line-height: 26px;
+                    &.nummber{
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .setting-btn{
+                border: 1px solid #fff;
+                width: 120px;
+                height: 34px;
+                line-height: 34px;
+                border-radius: 20px;
+                .icon-msnui-conf-bold{
+                   margin-left: -5px;
+                   margin-right: 5px;
+                }
             }
         }
     }
+
+.title{
+    color: #101010;
+    text-align: left;
+    font-size: 16px;
+    border-bottom:1px solid #BBBBBB; 
+    padding-bottom: 20px;
 }
+
 .followsinfo{
     ul{
         li{
@@ -180,4 +253,6 @@ import Mheader from '@/components/Mheader'
         }
     }
 }
+}
+
 </style>

@@ -1,19 +1,17 @@
 <template>
-<div class="header">
-    <div class="top ov">
-      <div class="nav-icon">
-          <i class="iconfont icon-ego-menu"></i>
-          <router-link to="../../home"><img src="../assets/logo.png"></router-link>
+<div class="header ov">
+    <div class="nav-icon fl">
+        <i class="iconfont icon-ego-menu"></i>
+        <router-link to="../../home"><img src="../assets/logo.png"></router-link>
+    </div>
+    <div class="mw ov">
+      <div class="Search">
+          <input type="text" placeholder="请输入搜索内容">
       </div>
-      <div class="ov">
-        <div class="Search">
-            <input type="text" placeholder="请输入搜索内容">
-        </div>
-        <div class="sign fr">
-          <a href="">登录</a>
-          <span>|</span>
-          <a href="">注册</a>
-        </div>
+      <div class="sign fr">
+        <a href="">登录</a>
+        <span>|</span>
+        <a href="">注册</a>
       </div>
     </div>
 </div>
@@ -31,17 +29,19 @@ h3{
   font-weight: normal;
   margin: 20px 0;
 }
-  .top{
+  .header{
     width: 100%;
     background: #000;
     height: 84px;
     display: flex;
     /* justify-content: center; 水平居中 */
     align-items: center;     /* 垂直居中 */
+    position: relative;
   }
   .nav-icon{
-    float: left;
-    width: 18%;
+    position: absolute;
+    width: 8%;
+    left: 30px;
   }
   .nav-icon i.icon-ego-menu{
     display: inline-block;
