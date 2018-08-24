@@ -14,6 +14,7 @@ import userinfo from '@/view/settings/userinfo'
 import accountbind from '@/view/settings/accountbind'
 import modifypsd from '@/view/settings/modifypsd'
 import myhome from '@/view/settings/myhome'
+import video from '@/view/video'
 
 Vue.use(Router)
 
@@ -77,6 +78,10 @@ export default new Router({
         {
             path: '/settings/myhome',
             component: myhome
+        },
+        {
+            path: '/video',
+            component: video
         }
     ]
 })
