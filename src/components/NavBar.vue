@@ -18,6 +18,9 @@
        <router-link tag="li" to="../../settings/accountbind">账号绑定</router-link>
        <router-link tag="li" to="../../settings/order">我的订单</router-link>
        <router-link tag="li" to="../../settings/study">最近学习</router-link>
+       <router-link tag="li" to="../../video">播放页</router-link>
+       <router-link tag="li" to="../../search">搜索页</router-link>
+       <router-link tag="li" to="../../list">列表页</router-link>
      </ul>
  </div>
 </template>
