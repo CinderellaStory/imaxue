@@ -21,6 +21,9 @@
        <router-link tag="li" to="../../video">播放页</router-link>
        <router-link tag="li" to="../../search">搜索页</router-link>
        <router-link tag="li" to="../../list">列表页</router-link>
+       <router-link tag="li" to="../../details">详情页</router-link>
+       <router-link tag="li" to="../../sureorder">确认页</router-link>
+       <router-link tag="li" to="../../cart">购物车</router-link>
      </ul>
  </div>
 </template>

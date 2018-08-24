@@ -15,6 +15,9 @@ import accountbind from '@/view/settings/accountbind'
 import modifypsd from '@/view/settings/modifypsd'
 import myhome from '@/view/settings/myhome'
 import video from '@/view/video'
+import details from '@/view/details'
+import sureorder from '@/view/sureorder'
+import cart from '@/view/cart'
 
 Vue.use(Router)
 
@@ -82,6 +85,18 @@ export default new Router({
         {
             path: '/video',
             component: video
+        },
+        {
+            path: '/details',
+            component: details
+        },
+        {
+            path: '/sureorder',
+            component: sureorder
+        },
+        {
+            path: '/cart',
+            component: cart
         }
     ]
 })
