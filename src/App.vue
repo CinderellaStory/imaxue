@@ -14,7 +14,7 @@ export default {
 .ml15{
   margin-left: 15px;
 }
-.cursor{
+.cursor,button{
   cursor: pointer;
 }
 button{

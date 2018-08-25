@@ -32,13 +32,6 @@
               </div>
               <p>可用手机号加密码登录，可通过手机号找回密码</p>
             </li>
-            <li>
-              <div class="items">
-                <span class="title">密码</span>
-                <button>设置密码</button>
-              </div>
-              <p>用于保护账号信息和登录安全</p>
-            </li>
             <!-- <li>
               <div class="items">
                 <span class="title">绑定第三方账号</span>
@@ -50,35 +43,34 @@
         <div class="bind">
           <div class="title">绑定第三方账号</div>
           <ul>
-            <li>
+            <li class="unbound">
               <i class="iconfont icon-qq-copy"></i>
-              <span>QQ</span>
+              <span class="bind-style">QQ</span>
               <span>未绑定</span>
-              <button>解绑</button>
-              <!-- <button>解绑</button> -->
+              <button @click="jump">绑定</button>
             </li>
-            <li>
+            <li class="unbound">
               <i class="iconfont icon-weixin-copy"></i>
-              <span>微信</span>
-              <span>未绑定</span>
-              <button>解绑</button>
-              <!-- <button>解绑</button> -->
+              <span class="bind-style">微信</span>
+              <span class="unbound-text">未绑定</span>
+              <button  @click="wechat">绑定</button>
             </li>
-            <li>
+            <li class="bound">
               <i class="iconfont icon-weibo"></i>
-              <span>微博</span>
-              <span>未绑定</span>
-              <button>解绑</button>
-              <!-- <button>解绑</button> -->
+              <span class="bind-style">微博</span>
+              <span class="already-bind">已绑定</span>
+              <button @click="weibo">解绑</button>
             </li>
           </ul>
         </div>
     </div>
+    <Dialog></Dialog>
  </div>
 </template>
 
 <script type="text/javascript">
 import Mheader from '@/components/Mheader'
+import Dialog from '@/components/Dialog'
 
   export default {
    data() {
@@ -86,8 +78,19 @@ import Mheader from '@/components/Mheader'
 
       }
   },
+  methods:{
+    jump(){
+      window.open('https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=100522525&redirect_uri=https%3A%2F%2Fsegmentfault.com%2Fuser%2Foauth%2Fqq&scope=get_user_info');
+    },
+     wechat(){
+       window.open("https://open.weixin.qq.com/connect/qrconnect?appid=wxd8936345ec1df5ac&redirect_uri=https%3A%2F%2Fsegmentfault.com%2Fuser%2Foauth%2Fweixin&response_type=code&scope=snsapi_login#wechat_redirect");
+     },
+     weibo(){
+       window.open("https://api.weibo.com/oauth2/authorize?client_id=1742025894&redirect_uri=https%3A%2F%2Fsegmentfault.com%2Fuser%2Foauth%2Fweibo&scope=follow_app_official_microblog");
+     }
+  },
    components: {
-     Mheader
+     Mheader,Dialog
    }
  }
 </script>
@@ -97,13 +100,38 @@ import Mheader from '@/components/Mheader'
     width: 1000px;
     margin: 45px auto;
 }
-
+button{
+    padding: 6px 16px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+  }
 .title{
   width: 20%;
   margin-right: 100px;
   font-weight: bold;
 }
-
+.bound .already-bind{
+  color: red;
+}
+.bound button{
+    background: #FF9800;
+    color: #fff;
+    border: 1px solid #FF9800;
+}
+.unbound .unbound-text{
+  color: #666;
+}
+.unbound button{
+    border: 1px solid #FF9800;
+    background: #fff;
+    color: #FF9800;
+}
+.bind-style{
+  width: 40px;
+  text-align: center;
+}
 .nav{
     margin: 10px 0 0 0;
     ul{
@@ -150,10 +178,6 @@ import Mheader from '@/components/Mheader'
               border: 1px solid #FF9800;
               background: #fff;
               color: #FF9800;
-              padding: 6px 16px;
-              display: inline-block;
-              font-size: 12px;
-              border-radius: 5px;
             }
         }
       }
@@ -162,9 +186,10 @@ import Mheader from '@/components/Mheader'
   .bind{
     text-align: left;
     padding-left: 50px;
-       margin-top: 20px;
+    margin-top: 20px;
     border-bottom: 1px solid #d9dde1;
     ul{
+        margin: 10px 0;
       li{
        height: 50px;
           display: flex;
@@ -181,20 +206,12 @@ import Mheader from '@/components/Mheader'
           font-size: 30px!important;
         }
         .icon-weibo{
-          font-size: 28px!important;
+          font-size: 30px!important;
           color: #E51C23;
         }
         span{
-          margin: 0 40px;
+          margin: 0 30px;
         }
-          button{
-        background: #FF9800;
-        border: none;
-        color: #fff;
-        padding: 6px 16px;
-        font-size: 12px;
-        border-radius: 5px;
-      }
       }
     }
   }
