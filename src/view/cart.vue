@@ -29,15 +29,18 @@
                   </div>
                   <div class="item-3 fl">￥{{item.courseprice}}</div>
                   <div class="item-4 fl">
-                      <i class="iconfont"></i>
+                      <i class="iconfont icon-shanchu"></i>
                   </div>
                 </li>
               </ul>
             </div>
-            <div class="pay-box ov">
-              <div class="fl payinfo">
+            <div class="pay-box">
+              <div class="payinfo">
                 <p class="number">共1件课程</p> 
                 <p class="amount">商品总金额：<span>￥299.99</span></p>
+              </div>
+              <div class="btn">
+                <button>确认订单</button>
               </div>
             </div>
         </div>
@@ -84,17 +87,10 @@ h1{
 i{
   margin-right: 6px;
   vertical-align: middle;
-}
-button{
-  border: none;
-  color: #fff;
-  font-size: 12px;
-  width: 160px;
-  height: 34px;
-  line-height: 34px;
-  text-align: center;
-  border-radius: 4px;
   cursor: pointer;
+}
+.icon-shanchu:hover{
+  color: red;
 }
 .content{
   background: #fff;
@@ -159,24 +155,34 @@ button{
       }
     }
     .pay-box{
-        display: flex;
         width: 100%;
-        align-items: center;
+        text-align: right;
       .payinfo{
         width: 100%;
         margin: 20px 0 10px;
         p{
-        text-align: left;
-        line-height: 30px;
+        line-height: 34px;
         }
         .amount{
           span{
             color: red;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 22px;
           }
         }
       }
+      button{
+        border: none;
+        color: #fff;
+        font-size: 12px;
+        width: 140px;
+        background: red;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
       }
+    }
   }
 </style>
