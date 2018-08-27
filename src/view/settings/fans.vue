@@ -23,7 +23,7 @@
                         </p>
                     </div>
                     <div class="fansbtn fr">
-                        <button>{{fan.btn}}</button>
+                        <button @click="problem1">{{fan.btn}}</button>
                     </div>
                 </li>
             </ul>
@@ -44,7 +44,7 @@ import Mheader from '@/components/Mheader'
                  job:'web前端工程师',
                  fllows:9,
                  fans:20,
-                 btn:"互相关注"
+                 btn:"关注"
              },
              {
                  username:'请叫我小任性',
@@ -77,6 +77,24 @@ import Mheader from '@/components/Mheader'
          ]
       }
   },
+  methods: {
+     problem1: function(e){
+         var txt = e.target.innerText;
+         var arr = this.fans.length;
+         for(var i=0;i<arr;i++){
+            if(txt == "关注"){
+                // console.log(this.fans[0].btn);
+                //  console.log("互相关注"+123+this.fans.btn);
+                this.fans[i].btn="互相关注"
+            }else{
+                 console.log("关注");
+                //  console.log("互相关注"+1234+this.fans.btn);
+                this.fans[i].btn="关注";
+            }
+         }
+    // console.log(e.target.innerText);
+    }
+},
    components: {
 Mheader
    }
@@ -150,7 +168,9 @@ Mheader
                 text-align: right;width: 40%;
                 button{
                     border: 1px solid #BBBBBB;
-                    padding: 6px 12px;
+                    
+                    width: 74px;
+                    height:30px;
                     border-radius: 4px;
                     font-size: 12px;
                     color: #666666;

@@ -3,7 +3,7 @@
      <Mheader></Mheader>
      <NavBar></NavBar>
     <div class="banner">
-      <img src="../assets/banner03.png" alt="">
+      <!-- <img src="../assets/banner03.png" alt=""> -->
     </div>
     <div class="Course-container">
       <div class="mw ov">
@@ -207,6 +207,9 @@ h3{
 }
 .banner{
   overflow: hidden;
+  background: url(../assets/banner03.png) no-repeat center center;
+  height: 500px;
+  width: 100%;
 }
 .adv img{
   border-radius: 20px;
