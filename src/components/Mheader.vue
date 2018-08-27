@@ -35,7 +35,7 @@ h3{
   .header{
     width: 100%;
     background: #000;
-    height: 84px;
+    height: 84px;    min-width: 1200px;
     display: flex;
     align-items: center;
   }

@@ -208,7 +208,7 @@ h3{
 .banner{
   overflow: hidden;
   background: url(../assets/banner03.png) no-repeat center center;
-  height: 500px;
+  height: 500px;    min-width: 1200px;
   width: 100%;
 }
 .adv img{
