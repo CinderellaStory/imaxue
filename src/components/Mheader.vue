@@ -1,19 +1,22 @@
 <template>
 <div class="header ov">
-    <div class="nav-icon fl">
-        <i class="iconfont icon-ego-menu"></i>
-        <router-link to="../../home"><img src="../assets/logo.png"></router-link>
-    </div>
-    <div class="mw ov">
-      <div class="Search">
-          <input type="text" placeholder="请输入搜索内容">
-      </div>
-      <div class="sign fr">
-        <a href="">登录</a>
-        <span>|</span>
-        <a href="">注册</a>
+    <div class="logo">
+      <div class="nav-icon fl">
+          <i class="iconfont icon-ego-menu"></i>
+          <router-link to="../../home"><img src="../assets/logo.png"></router-link>
       </div>
     </div>
+      <div class="Search ov">
+          <div class="search-input fl">
+            <input type="text" placeholder="请输入搜索内容">
+            <i class="iconfont icon-sousuo"></i>
+          </div>
+          <div class="sign fr">
+            <a href="">登录</a>
+            <span>|</span>
+            <a href="">注册</a>
+          </div>
+      </div>
 </div>
 </template>
 
@@ -34,36 +37,51 @@ h3{
     background: #000;
     height: 84px;
     display: flex;
-    /* justify-content: center; 水平居中 */
-    align-items: center;     /* 垂直居中 */
-    position: relative;
+    align-items: center;
+  }
+  .logo{
+    width: 20%;
+    float: left;
   }
   .nav-icon{
-    position: absolute;
-    width: 8%;
-    left: 30px;
+    vertical-align: top;
+    overflow: hidden;
   }
   .nav-icon i.icon-ego-menu{
-    display: inline-block;
+    float: left;
+    margin: 4px;
+    font-size: 30px;
   }
     .nav-icon a{
-     display: inline-block;
+    float: left;
   }
 .Search{
   float: left;
-  line-height: 84px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
 }
-.Search input{
-  width: 700px;
+.search-input{
+  width: 64%;
+  position: relative;
+}
+.search-input input{
+  width: 100%;
   height: 35px;
   border-radius: 20px;
   outline: none;
   border: none;
   padding-left: 10px;
 }
+.icon-sousuo{
+  position: absolute;
+  top: 6px;
+  font-size: 20px;
+  right: 1px;
+}
 .sign{
      font-size: 14px;
-     width: 200px;
+     width: 40%;
      text-align: right;
      line-height: 84px;
 }
