@@ -4,6 +4,7 @@ import home from '@/view/home'
 import list from '@/view/list'
 import search from '@/view/search'
 import login from '@/view/login/login'
+import register from '@/view/register/register'
 import fans from '@/view/settings/fans'
 import follows from '@/view/settings/follows'
 import collect from '@/view/settings/collect'
@@ -43,6 +44,11 @@ export default new Router({
             path: '/login',
             name: 'login',
             component: login
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: register
         },
         {
             path: '/settings/fans',
