@@ -22,7 +22,7 @@
         </div>
         <div class="aside-course fl">
             <h3>推荐课程</h3>
-            <ul>
+            <!-- <ul>
                 <li v-for="(item,index) in items" :key="index">
                     <div class="course-img">
                       <img src="../assets/web.png" alt="">
@@ -35,7 +35,7 @@
                       </p>
                     </div>
                   </li>
-            </ul>
+            </ul> -->
         </div>
      </div>
  </div>
@@ -134,7 +134,7 @@ import Mheader from '@/components/Mheader'
         }
     .list-container{
         margin-top: 50px;
-        width: 80%;
+        width: 100%;
         ul{
             li{
                 text-align: left;
@@ -163,33 +163,33 @@ import Mheader from '@/components/Mheader'
             }
         }
     }
-    .aside-course{
-        width: 20%;
-        margin-top: 40px;
-        ul{
-            li{
-                 width: 200px;
-                margin:20px 0 0 20px;
-                border-radius: 20px;
-                .course-img{
-                    img{
-                        width: 200px;
-                        height: 120px;
-                        display: block;
-                        border-radius: 20px 20px 0 0;
-                    }
-                }
-                .course-detail{
-                background: #fff;
-                text-align: left;
-                padding: 6px 12px;
-                border-radius: 0 0 20px 20px;
-                p{
-                    font-size: 14px;
-                    line-height: 24px;
-                 }
-                }
-            }
-        }
-    }
+    // .aside-course{
+    //     width: 20%;
+    //     margin-top: 40px;
+    //     ul{
+    //         li{
+    //              width: 200px;
+    //             margin:20px 0 0 20px;
+    //             border-radius: 20px;
+    //             .course-img{
+    //                 img{
+    //                     width: 200px;
+    //                     height: 120px;
+    //                     display: block;
+    //                     border-radius: 20px 20px 0 0;
+    //                 }
+    //             }
+    //             .course-detail{
+    //             background: #fff;
+    //             text-align: left;
+    //             padding: 6px 12px;
+    //             border-radius: 0 0 20px 20px;
+    //             p{
+    //                 font-size: 14px;
+    //                 line-height: 24px;
+    //              }
+    //             }
+    //         }
+    //     }
+    // }
 </style>
