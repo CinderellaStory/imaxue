@@ -3,14 +3,14 @@
      <Mheader></Mheader>
      <div class="mw">
         <div class="list-container fl">
-            <h3>Vue2.0相关课程</h3>
+            <h2>Vue2.0相关课程</h2>
             <ul class="ov">
                 <router-link tag="li" v-for="(list,index) in lists" :key="index" to="to">
                     <div class="fl">
                         <img src="../assets/web.png" alt="">
                     </div>
                     <div class="fr">
-                        <p>{{list.name}}</p>
+                        <p class="course-name">{{list.name}}</p>
                         <p>{{list.user}}</p>
                         <p class="ov">
                             <span class="price fl">￥{{list.price}}</span>
@@ -20,9 +20,9 @@
                 </router-link>
             </ul>
         </div>
-        <div class="aside-course fl">
+        <!--<div class="aside-course fl">
             <h3>推荐课程</h3>
-            <ul>
+             <ul>
                 <li v-for="(item,index) in items" :key="index">
                     <div class="course-img">
                       <img src="../assets/web.png" alt="">
@@ -35,7 +35,7 @@
                       </p>
                     </div>
                   </li>
-            </ul>
+            </ul> -->
         </div>
      </div>
  </div>
@@ -128,23 +128,26 @@ import Mheader from '@/components/Mheader'
 </script>
 
 <style scoped lang="less">
+h2{
+    margin: 20px;
+}
 .price{
         color: red;
         font-size: 16px;
         }
     .list-container{
         margin-top: 50px;
-        width: 80%;
+        width: 100%;
         ul{
             li{
                 text-align: left;
-                width: 360px;
+                width: 350px;
                 height: 120px;
                 background: #fff;
                 float: left;
                 border-radius: 20px;
-                padding: 20px;
-                margin: 20px;
+                padding: 14px;
+                margin: 14px 14px 0 0;
                 display: flex;
                 align-items: center;
                 .fl{
@@ -154,42 +157,48 @@ import Mheader from '@/components/Mheader'
                     }
                 }
                 .fr{
-                    margin-left: 20px;
+                    margin-left: 14px;
                     p{
+                        &.course-name{
+                            font-weight: bold;
+                        }
                         font-size: 14px;
-                        line-height: 24px;
+                        line-height: 30px;
                     }
                 }
             }
+                li:nth-child(3n){
+                    margin-right: 0;
+                }
         }
     }
-    .aside-course{
-        width: 20%;
-        margin-top: 40px;
-        ul{
-            li{
-                 width: 200px;
-                margin:20px 0 0 20px;
-                border-radius: 20px;
-                .course-img{
-                    img{
-                        width: 200px;
-                        height: 120px;
-                        display: block;
-                        border-radius: 20px 20px 0 0;
-                    }
-                }
-                .course-detail{
-                background: #fff;
-                text-align: left;
-                padding: 6px 12px;
-                border-radius: 0 0 20px 20px;
-                p{
-                    font-size: 14px;
-                    line-height: 24px;
-                 }
-                }
-            }
-        }
-    }
+    // .aside-course{
+    //     width: 20%;
+    //     margin-top: 40px;
+    //     ul{
+    //         li{
+    //              width: 200px;
+    //             margin:20px 0 0 20px;
+    //             border-radius: 20px;
+    //             .course-img{
+    //                 img{
+    //                     width: 200px;
+    //                     height: 120px;
+    //                     display: block;
+    //                     border-radius: 20px 20px 0 0;
+    //                 }
+    //             }
+    //             .course-detail{
+    //             background: #fff;
+    //             text-align: left;
+    //             padding: 6px 12px;
+    //             border-radius: 0 0 20px 20px;
+    //             p{
+    //                 font-size: 14px;
+    //                 line-height: 24px;
+    //              }
+    //             }
+    //         }
+    //     }
+    // }
 </style>

@@ -1,12 +1,5 @@
 <template>
  <div class="navbar">
-     <!-- <ul>
-       <router-link tag="li" to="follows">热门推荐</router-link>
-       <router-link tag="li" to="follows">新手入门</router-link>
-       <router-link tag="li" to="follows">经典课程</router-link>
-       <router-link tag="li" to="follows">实战课程</router-link>
-     </ul> -->
-       <!-- <h3>个人中心</h3> -->
      <ul>
        <router-link tag="li" to="../../settings/myhome">我的主页</router-link>
        <router-link tag="li" to="../../settings/teachers">讲师主页</router-link>

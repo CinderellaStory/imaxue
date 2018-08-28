@@ -2,7 +2,7 @@
 <div class="header ov">
     <div class="logo">
       <div class="nav-icon fl">
-          <i class="iconfont icon-ego-menu"></i>
+          <i class="iconfont icon-ego-menu" @click="childClick"></i>
           <router-link to="../../home"><img src="../assets/logo.png"></router-link>
       </div>
     </div>
@@ -14,7 +14,7 @@
           <div class="sign fr">
             <a href="" @click="GoLogin">登录</a>
             <span>|</span>
-            <a href="">注册</a>
+            <a href="" @click="GoRegister">注册</a>
           </div>
       </div>
 </div>
@@ -24,14 +24,25 @@
   export default{
     data(){
       return{
-        panelShow:false
+        childValue:false
       }
     },
     methods:{
+      childClick () {
+        // childByValue是在父组件on监听的方法
+        // 第二个参数this.childValue是需要传的值
+        this.$emit('childByValue', this.childValue)
+      },
       GoLogin(){
       var _this = this
       _this.$router.push({
         path:'/login'
+      })
+    },
+    GoRegister(){
+      var _this = this
+      _this.$router.push({
+        path:'/register'
       })
     }
     }

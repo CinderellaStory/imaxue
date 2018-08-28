@@ -1,7 +1,7 @@
 <template>
  <div class="home">
      <Mheader></Mheader>
-     <NavBar></NavBar>
+     <NavBar v-show="childByValue"></NavBar>
     <div class="banner">
       <!-- <img src="../assets/banner03.png" alt=""> -->
     </div>
@@ -118,7 +118,7 @@ import NavBar from '@/components/NavBar'
 export default {
   data () {
     return {
-      panelShow:false,
+      childValue:false,
       teachertitle:"讲师推荐",
       items:[
         {
@@ -197,7 +197,14 @@ export default {
   },
   components:{
       Mheader,NavBar
-  }
+  },
+    methods: {
+      childByValue: function (childValue) { 
+        alert(1111111)
+        // childValue就是子组件传过来的值
+        this.childValue = childValue
+      }
+    }
 }
 </script>
 
