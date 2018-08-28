@@ -25,6 +25,7 @@ import cart from '@/view/cart'
 Vue.use(Router)
 
 export default new Router({
+    mode: 'history',
     routes: [{
             path: '/',
             component: home
