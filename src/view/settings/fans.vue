@@ -23,7 +23,7 @@
                         </p>
                     </div>
                     <div class="fansbtn fr">
-                        <button @click="problem1">{{fan.btn}}</button>
+                        <button @click="problem1" v-text="fan.btn"></button>
                     </div>
                 </li>
             </ul>
@@ -38,6 +38,7 @@ import Mheader from '@/components/Mheader'
   export default {
    data() {
      return {
+         isShow:true,
          fans:[
              {
                  username:'请叫我小任性',

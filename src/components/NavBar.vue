@@ -1,6 +1,5 @@
 <template>
  <div class="navbar">
-      <!-- <h3>首页</h3> -->
      <ul>
        <router-link tag="li" to="follows">热门推荐</router-link>
        <router-link tag="li" to="follows">新手入门</router-link>
@@ -29,11 +28,11 @@
 </template>
 
 <script type="text/javascript">
-  export default {
-   data() {
-     return {
-
-      }
+export default {
+  data(){
+    return{
+      
+    }
   },
    components: {
 

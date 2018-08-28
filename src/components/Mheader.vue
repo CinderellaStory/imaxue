@@ -12,7 +12,7 @@
             <i class="iconfont icon-sousuo"></i>
           </div>
           <div class="sign fr">
-            <a href="">登录</a>
+            <a href="" @click="GoLogin">登录</a>
             <span>|</span>
             <a href="">注册</a>
           </div>
@@ -21,7 +21,21 @@
 </template>
 
 <script>
-
+  export default{
+    data(){
+      return{
+        panelShow:false
+      }
+    },
+    methods:{
+      GoLogin(){
+      var _this = this
+      _this.$router.push({
+        path:'/login'
+      })
+    }
+    }
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -44,8 +58,7 @@ h3{
     float: left;
   }
   .nav-icon{
-    vertical-align: top;
-    overflow: hidden;
+    cursor: pointer;
   }
   .nav-icon i.icon-ego-menu{
     float: left;

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import home from '@/view/home'
 import list from '@/view/list'
 import search from '@/view/search'
+import login from '@/view/login/login'
 import fans from '@/view/settings/fans'
 import follows from '@/view/settings/follows'
 import collect from '@/view/settings/collect'
@@ -37,6 +38,11 @@ export default new Router({
         {
             path: '/search',
             component: search
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: login
         },
         {
             path: '/settings/fans',

@@ -116,9 +116,9 @@ import Mheader from '@/components/Mheader'
 import NavBar from '@/components/NavBar'
 
 export default {
-  name: 'HelloWorld',
   data () {
     return {
+      panelShow:false,
       teachertitle:"讲师推荐",
       items:[
         {
