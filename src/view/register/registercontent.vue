@@ -31,7 +31,7 @@
                         <router-link to="" class="usererms">使用条款</router-link>
                 </div>
                 <div class="group">
-                    <button class="btn logionbtn" @click="handleRegister('RegisterForm')">注册</button>
+                    <button class="btn registerbtn" @click="handleRegister('RegisterForm')">注册</button>
                 </div>
                 <div class="group">
                     <h6>
@@ -193,7 +193,7 @@ export default {
 .sentcode {
     background: #42c02e;
     height: 42px;
-    width: 100px;
+    width: 90px;
     position: absolute;
     top: 0;
     border-radius: 0 3px 3px 0;
@@ -201,6 +201,7 @@ export default {
     line-height: 42px;
     right: 0;
     text-align: center;
+    font-size: 12px;
 }
 
 @orange: #fe7300;
@@ -267,11 +268,11 @@ export default {
       .usererms{
           text-decoration: underline;
       }
-      .logionbtn {
+      .registerbtn {
         width: 100%;
         background: @blue;
         border-radius: 5px;
-        padding: 9px 0;
+        padding: 12px 0;
         color: #fff;
         border: 0;
       }

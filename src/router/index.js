@@ -5,6 +5,7 @@ import list from '@/view/list'
 import search from '@/view/search'
 import login from '@/view/login/login'
 import register from '@/view/register/register'
+import forget from '@/view/forget/forget'
 import fans from '@/view/settings/fans'
 import follows from '@/view/settings/follows'
 import collect from '@/view/settings/collect'
@@ -49,6 +50,11 @@ export default new Router({
             path: '/register',
             name: 'register',
             component: register
+        },
+        {
+            path: '/forget',
+            name: 'forget',
+            component: forget
         },
         {
             path: '/settings/fans',
