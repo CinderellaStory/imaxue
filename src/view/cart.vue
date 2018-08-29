@@ -6,7 +6,7 @@
         <div class="sureorder-box">
             <div class="order-times ov" v-show="items.length!==0">
                 <div class="item-1 fl" style="text-aligin:center">
-                    <input type="checkbox" name="allcheck">
+                    <input type="checkbox" name="allcheck" v-model="checked" @change="AllCheck()">
                     <label for="" id="allcheck">全选</label>
                 </div>
                 <div class="item-2 fl">课程</div>
@@ -16,7 +16,7 @@
             <div class="course-item">
               <ul>
                 <li v-for="(item,index) in items" :key="index">
-                  <div class="item-1 fl"> <input type="checkbox"></div>
+                  <div class="item-1 fl"> <input type="checkbox" v-model="items.SigleCheck"></div>
                   <div class="item-2 fl">
                     <div class="fl course-img">
                         <img src="../assets/web.png" alt="">
@@ -57,18 +57,21 @@ import Mheader from '@/components/Mheader'
   export default {
    data() {
      return {
+       checked: false,
        items:[
         {
-           courseneme:'全网最热Python3入门+进阶 更快上手实际开发',
+           courseneme:'111111111全网最热Python3入门+进阶 更快上手实际开发',
            teachersneme:'请叫我小任性',
            videostimes:'视频时长：一个小时20分',
-           courseprice:333.33
+           courseprice:333.33,
+           SigleCheck: false
         },
         {
-           courseneme:'全网最热Python3入门+进阶 更快上手实际开发',
+           courseneme:'222222全网最热Python3入门+进阶 更快上手实际开发',
            teachersneme:'请叫我小任性',
            videostimes:'视频时长：一个小时20分',
-           courseprice:333.33
+           courseprice:333.33,
+           SigleCheck: false
         }
        ]
       }
@@ -76,6 +79,14 @@ import Mheader from '@/components/Mheader'
   methods:{
     del(index){
       this.items.splice(index,1);
+    },
+    AllCheck(){
+      if(this.checked){
+        this.items.SigleCheck = true;
+      }
+      else{
+        this.items.SigleCheck = false
+      }
     }
   },
    components: {
