@@ -78,14 +78,15 @@ body{
   left: 0;
   background: #fff;
   width: 230px;
-  height: 100%;
+  height: 800px;
+   overflow:auto;
   ul{
     li{
       height: 40px;
       line-height: 40px;
       cursor: pointer;
       font-size: 12px;
-      border-bottom:1px solid #ddd;
+      // border-bottom:1px solid #ddd;
       &:hover{
         background: #d3d3d3;
         color: red;
