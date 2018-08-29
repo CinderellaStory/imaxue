@@ -1,10 +1,10 @@
 <template>
  <div class="cart">
     <Mheader></Mheader>
-    <h1 class="mw">确认订单</h1>
+    <h1 class="mw">购物车</h1>
     <div class="mw content">
         <div class="sureorder-box">
-            <div class="order-times ov">
+            <div class="order-times ov" v-show="items.length!==0">
                 <div class="item-1 fl" style="text-aligin:center">
                     <input type="checkbox" name="allcheck">
                     <label for="" id="allcheck">全选</label>
@@ -29,12 +29,12 @@
                   </div>
                   <div class="item-3 fl">￥{{item.courseprice}}</div>
                   <div class="item-4 fl">
-                      <i class="iconfont icon-shanchu"></i>
+                      <i class="iconfont icon-shanchu" @click="del"></i>
                   </div>
                 </li>
               </ul>
             </div>
-            <div class="pay-box">
+            <div class="pay-box" v-show="items.length!==0">
               <div class="payinfo">
                 <p class="number">共1件课程</p> 
                 <p class="amount">商品总金额：<span>￥299.99</span></p>
@@ -42,6 +42,9 @@
               <div class="btn">
                 <button>确认订单</button>
               </div>
+            </div>
+            <div v-show="items.length==0">
+              <p>购物车暂无数据……</p>
             </div>
         </div>
     </div>
@@ -69,6 +72,11 @@ import Mheader from '@/components/Mheader'
         }
        ]
       }
+  },
+  methods:{
+    del(index){
+      this.items.splice(index,1);
+    }
   },
    components: {
      Mheader
