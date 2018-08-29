@@ -1,6 +1,6 @@
 <template>
  <div class="navbar">
-     <ul>
+     <!-- <ul>
        <router-link tag="li" to="../../settings/myhome">我的主页</router-link>
        <router-link tag="li" to="../../settings/teachers">讲师主页</router-link>
        <router-link tag="li" to="../../settings/follows">我的关注</router-link>
@@ -16,7 +16,7 @@
        <router-link tag="li" to="../../details">详情页</router-link>
        <router-link tag="li" to="../../sureorder">确认页</router-link>
        <router-link tag="li" to="../../cart">购物车</router-link>
-     </ul>
+     </ul> -->
  </div>
 </template>
 
@@ -34,27 +34,27 @@ export default {
 </script>
 
 <style scoped lang="less">
-body{
-  position: relative;
-}
-.navbar{
-  position: absolute;
-  left: 0;
-  background: #fff;
-  width: 230px;
-  height: 100%;
-  ul{
-    li{
-      height: 40px;
-      line-height: 40px;
-      cursor: pointer;
-      font-size: 12px;
-      border-bottom:1px solid #ddd;
-      &:hover{
-        background: #d3d3d3;
-        color: red;
-      }
-    }
-  }
-}
+// body{
+//   position: relative;
+// }
+// .navbar{
+//   position: absolute;
+//   left: 0;
+//   background: #fff;
+//   width: 230px;
+//   height: 100%;
+//   ul{
+//     li{
+//       height: 40px;
+//       line-height: 40px;
+//       cursor: pointer;
+//       font-size: 12px;
+//       border-bottom:1px solid #ddd;
+//       &:hover{
+//         background: #d3d3d3;
+//         color: red;
+//       }
+//     }
+//   }
+// }
 </style>
