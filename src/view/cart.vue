@@ -29,7 +29,7 @@
                   </div>
                   <div class="item-3 fl">￥{{item.courseprice}}</div>
                   <div class="item-4 fl">
-                      <i class="iconfont icon-shanchu" @click="del"></i>
+                      <i class="iconfont icon-shanchu" @click="openMask(index)"></i>
                   </div>
                 </li>
               </ul>
@@ -47,18 +47,22 @@
               <p>购物车暂无数据……</p>
             </div>
         </div>
+        <div v-show="openMask">
+          <Dialog v-model="sendVal" type="danger" title="删除订单" content="您确定要删除订单？" v-on:cancel="cancel()" @danger="Delete()" dangerText="Delete"></Dialog>
+        </div>
     </div>
  </div>
 </template>
 
 <script type="text/javascript">
 import Mheader from '@/components/Mheader'
-
+import Dialog from '@/components/Dialog'
   export default {
    data() {
      return {
        TotalAmount:0,  //总金额
        checked: false,
+       sendVal:false,
        items:[
         {
            courseneme:'111111111全网最热Python3入门+进阶 更快上手实际开发',
@@ -78,6 +82,12 @@ import Mheader from '@/components/Mheader'
       }
   },
   methods:{
+     cancel(){
+          this.sendVal = false
+      },
+      openMask(index){
+          this.sendVal = true;
+      },
     countTotalMoney(){
       var _this = this;
       var TotalAmount = 0;
@@ -91,9 +101,9 @@ import Mheader from '@/components/Mheader'
       }
         return this.TotalAmount;
     },
-    del(index){
-      this.items.splice(index,1);
-    },
+     Delete(index){
+          this.items.splice(index,1);
+      },
     AllCheck(){
       if(this.checked){
         this.items.SigleCheck = true;
@@ -119,7 +129,7 @@ import Mheader from '@/components/Mheader'
       }
   },
    components: {
-     Mheader
+     Mheader,Dialog
    }
  }
 </script>

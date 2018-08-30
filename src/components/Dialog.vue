@@ -74,7 +74,6 @@
       DelBtn(){
           this.$emit('danger');
           this.CloseDialog();
-          console.log("删除")
       },
         confirmBtn(){
             this.$emit('confirm');
