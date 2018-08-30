@@ -18,14 +18,14 @@
                 </div>
             </div>
             <div class="myhome-right fr">
-                <div class="items">
+                <router-link to="follows" class="items">
                     <p class="nummber">20</p>
                     <p>关注</p>
-                </div>
-                <div class="items">
+                </router-link>
+                <router-link to="fans" class="items">
                     <p class="nummber">20</p>
                     <p>粉丝</p>
-                </div>
+                </router-link>
                 <div class="items setting-btn">
                     <router-link to='userinfo'>
                         <i class="iconfont icon-msnui-conf-bold"></i>
