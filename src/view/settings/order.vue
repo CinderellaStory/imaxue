@@ -14,7 +14,7 @@
         <Dialog v-model="sendVal" type="danger" title="删除订单" content="您确定要删除订单？" v-on:cancel="cancel()" @danger="Delete()" dangerText="Delete"></Dialog>
        </div>
        <div v-show="cancelMask">
-        <Dialog v-model="cancelVal" type="danger" title="删除订单" content="您确定要删除订单吗？" v-on:cancel="cancel()" @danger="Delete()" dangerText="Delete"></Dialog>
+        <Dialog v-model="cancelVal" type="danger" title="删除订单" content="您确定要取消订单吗？" v-on:cancel="cancel()" @danger="Delete()" dangerText="Delete"></Dialog>
        </div>
         <div class="followsinfo">
             <ul>
