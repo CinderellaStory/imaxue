@@ -40,7 +40,7 @@
                 <p class="amount">商品总金额：<span>￥{{TotalAmount}}</span></p>
               </div>
               <div class="btn">
-                <button>确认订单</button>
+                <button @click="sureorder">确认订单</button>
               </div>
             </div>
             <div v-show="items.length==0">
@@ -87,6 +87,12 @@ import Dialog from '@/components/Dialog'
       },
       openMask(index){
           this.sendVal = true;
+      },
+      sureorder(){
+        var _this = this
+      _this.$router.push({
+        path:'/sureorder'
+         })
       },
     countTotalMoney(){
       var _this = this;
