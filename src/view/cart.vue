@@ -91,7 +91,7 @@ import Dialog from '@/components/Dialog'
       sureorder(){
         var _this = this
       _this.$router.push({
-        path:'/sureorder'
+        path:'q/sureorder'
          })
       },
     countTotalMoney(){

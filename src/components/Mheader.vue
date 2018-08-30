@@ -76,6 +76,7 @@ body{
 .navbar{
   position: absolute;
   left: 0;
+  z-index:1;
   background: #fff;
   width: 230px;
   height: 800px;
