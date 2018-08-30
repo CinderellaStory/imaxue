@@ -10,12 +10,18 @@
                 <router-link tag="li" to="">已取消</router-link>
             </ul>
         </div>
+       <div v-show="openMask">
+        <Dialog v-model="sendVal" type="danger" title="删除订单" content="您确定要删除订单？" v-on:cancel="cancel()" @danger="Delete()" dangerText="Delete"></Dialog>
+       </div>
+       <div v-show="cancelMask">
+        <Dialog v-model="cancelVal" type="danger" title="删除订单" content="您确定要删除订单吗？" v-on:cancel="cancel()" @danger="Delete()" dangerText="Delete"></Dialog>
+       </div>
         <div class="followsinfo">
             <ul>
                 <li v-for="(fan,index) in fans" :key="index">
                     <p class="times ov">
                         <span class="fl">购买时间：{{fan.times}}</span>
-                        <span class="fr del" @click="del()">删除</span>
+                        <span class="fr del" @click="openMask(index)">删除</span>
                     </p>
                     <div class="orderinfo">
                         <div class="userlogo fl"><img src="../../assets/1.jpg" alt=""></div>
@@ -27,7 +33,7 @@
                         <div class="price fl">￥{{fan.price}}</div>
                         <div class="fansbtn fr">
                             <button>{{fan.btn}}</button>
-                            <p class="cancelbtn">{{fan.cancelbtn}}</p>
+                            <p class="cancelbtn" @click="cancelMask(index)">{{fan.cancelbtn}}</p>
                         </div>
                     </div>
                 </li>
@@ -42,14 +48,17 @@
 
 <script type="text/javascript">
 import Mheader from '@/components/Mheader'
+import Dialog from '@/components/Dialog'
 
   export default {
    data() {
      return {
+         sendVal:false,
+         cancelVal:false,
          fans:[
              {
                  times:"2018-08-03",
-                 coursename:'Vue2.0新手构建单页面应用',
+                 coursename:'111Vue2.0新手构建单页面应用',
                  username:'请叫我小任性',
                  videotime:'1小时43分钟',
                  price:19.99,
@@ -58,7 +67,7 @@ import Mheader from '@/components/Mheader'
              },
              {
                  times:"2018-08-03",
-                 coursename:'Vue2.0新手构建单页面应用',
+                 coursename:'222Vue2.0新手构建单页面应用',
                  username:'请叫我小任性',
                  videotime:'1小时43分钟',
                  price:19.99,
@@ -67,7 +76,7 @@ import Mheader from '@/components/Mheader'
              },
              {
                  times:"2018-08-03",
-                 coursename:'Vue2.0新手构建单页面应用',
+                 coursename:'333Vue2.0新手构建单页面应用',
                  username:'请叫我小任性',
                  videotime:'1小时43分钟',
                  price:19.99,
@@ -96,11 +105,23 @@ import Mheader from '@/components/Mheader'
       }
   },
    components: {
-    Mheader
+    Mheader,Dialog
    },
    methods:{
-       del(index){
-        this.fans.splice(index,1);
+       openMask(index){
+            this.sendVal = true;
+        },
+        DelText(){
+            console.log("这里是回调函数")
+        },
+        Delete(index){
+            this.fans.splice(index,1);
+        },
+        cancel(){
+            this.sendVal = false
+        },
+        cancelMask(index){
+            this.cancelVal = true;
         },
    }
  }

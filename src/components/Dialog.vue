@@ -2,8 +2,9 @@
  <div class="dialog" v-show="show">
     <div class="dialog_bg"></div>
     <div class="dialog_content">
-        <div class="title">绑定手机<i class="iconfont icon-delete" @click="cancel"></i></div>
-        <div class="items">
+        <div class="title">{{title}}<i class="iconfont icon-delete" @click="CloseDialog"></i></div>
+        <h2 class="content" v-html="content"></h2>
+        <!-- <div class="items">
             <label for="">手机号码：</label>
             <input type="text" placeholder="请输入你的手机号码">
             <button>发送验证码</button>
@@ -11,10 +12,10 @@
         <div class="items">
             <label for="">短信验证码：</label>
             <input type="text" placeholder="请输入手机验证码">
-        </div>
+        </div> -->
         <div class="btn">
-            <button class="SaveBtn">保存</button>
-            <button class="CancelBtn" @click="cancel">取消</button>
+            <button v-if="type != 'confirm'" class="DelBtn" @click="DelBtn">{{DeleteText}}</button>
+            <button v-if="type == 'danger'" class="CancelBtn" @click="CancelBtn">{{cancelText}}</button>
         </div>
     </div>
  </div>
@@ -27,10 +28,58 @@
              show:true
         }
   },
-  methods:{
-      cancel(){
-          this.show = false;
+  props:{
+      value:{},
+      content:{
+          type:String,
+          default:''
+      },
+      type:{
+        type: String,
+        default: 'default'
+    },
+      title:{
+          type:String,
+          default:''
+      },
+      DeleteText:{
+          type:String,
+          default:'删除'
+      },
+      cancelText:{
+          type:String,
+          default:'取消'
       }
+  },
+  mounted(){
+      this.show = this.value;
+  },
+  watch:{
+      value(newVal,oldVal){
+          this.show = newVal;
+      },
+      show(val){
+          this.$emit('input',val);
+      }
+  },
+  methods:{
+      CloseDialog(){
+          this.show = false;
+      },
+      CancelBtn(){
+          this.$emit('cancel');
+          this.CloseDialog();
+           console.log("取消")
+      },
+      DelBtn(){
+          this.$emit('danger');
+          this.CloseDialog();
+          console.log("删除")
+      },
+        confirmBtn(){
+            this.$emit('confirm');
+            this.CloseDialog();
+        }
   },
    components: {
 
@@ -39,6 +88,10 @@
 </script>
 
 <style scoped lang="less">
+.content{
+    text-align: center;
+    margin-top: 30px;
+}
 .icon-delete{
     position: absolute;
     right: 10px;
@@ -111,7 +164,7 @@
                 font-size: 12px;
                 padding: 6px 30px;
                 border-radius: 6px;
-                &.SaveBtn{
+                &.DelBtn{
                 background: #6CB6FD;
                 border: 1px solid #6CB6FD;
                 color: #fff;
