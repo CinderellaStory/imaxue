@@ -15,7 +15,7 @@
                 <li v-for="(fan,index) in fans" :key="index">
                     <p class="times ov">
                         <span class="fl">购买时间：{{fan.times}}</span>
-                        <span class="fr del">删除</span>
+                        <span class="fr del" @click="del()">删除</span>
                     </p>
                     <div class="orderinfo">
                         <div class="userlogo fl"><img src="../../assets/1.jpg" alt=""></div>
@@ -32,6 +32,9 @@
                     </div>
                 </li>
             </ul>
+            <div class="NoList" v-show="fans.length==0">
+                <p>暂无订单~~~~</p>
+            </div>
         </div>
      </div>
  </div>
@@ -94,6 +97,11 @@ import Mheader from '@/components/Mheader'
   },
    components: {
     Mheader
+   },
+   methods:{
+       del(index){
+        this.fans.splice(index,1);
+        },
    }
  }
 </script>
@@ -101,6 +109,9 @@ import Mheader from '@/components/Mheader'
 <style scoped lang="less">
 .mw{
     width: 1000px;
+}
+.NoList{
+    margin: 50px 0;
 }
 .nav{
     margin: 50px 0 30px 0;
