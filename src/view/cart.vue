@@ -6,7 +6,7 @@
         <div class="sureorder-box">
             <div class="order-times ov" v-show="items.length!==0">
                 <div class="item-1 fl" style="text-aligin:center">
-                    <input type="checkbox" name="allcheck" v-model="checked" @change="AllCheck()">
+                    <input type="checkbox" name="allcheck" id="checkA" v-model="checked" @change="AllCheck()">
                     <label for="" id="allcheck">全选</label>
                 </div>
                 <div class="item-2 fl">课程</div>
@@ -37,7 +37,7 @@
             <div class="pay-box" v-show="items.length!==0">
               <div class="payinfo">
                 <p class="number">共1件课程</p> 
-                <p class="amount">商品总金额：<span>￥299.99</span></p>
+                <p class="amount">商品总金额：<span>￥{{TotalAmount}}</span></p>
               </div>
               <div class="btn">
                 <button>确认订单</button>
@@ -57,6 +57,7 @@ import Mheader from '@/components/Mheader'
   export default {
    data() {
      return {
+       TotalAmount:0,  //总金额
        checked: false,
        items:[
         {
@@ -77,6 +78,19 @@ import Mheader from '@/components/Mheader'
       }
   },
   methods:{
+    countTotalMoney(){
+      var _this = this;
+      var TotalAmount = 0;
+      for(var i= 0; i < this.items.length;i++){
+         if(this.items.SigleCheck == true){
+           console.log(this.items[i].courseprice)
+            this.TotalAmount  += this.items[i].courseprice;
+      }else{
+        return;
+      }
+      }
+        return this.TotalAmount;
+    },
     del(index){
       this.items.splice(index,1);
     },
@@ -85,9 +99,24 @@ import Mheader from '@/components/Mheader'
         this.items.SigleCheck = true;
       }
       else{
-        this.items.SigleCheck = false
+        this.items.SigleCheck = false;
       }
+        // this.countTotalMoney();
     }
+  },
+  watch:{
+		SigleCheck: {
+			handler(){
+        if (this.SigleCheck.length == this.items.length) {
+        console.log("全选");
+        this.items.SigleCheck = true;
+			} else {
+        console.log("单选");
+        this.items.SigleCheck = false;
+			}
+    },
+    deep:true
+      }
   },
    components: {
      Mheader

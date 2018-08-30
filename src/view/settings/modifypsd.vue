@@ -13,15 +13,15 @@
             <ul>
                 <li>
                     <label for="">旧密码</label>
-                    <input type="text" placeholder="请输入旧密码">
+                    <input type="password" placeholder="请输入旧密码">
                 </li>
                 <li>
                     <label for="">新密码</label>
-                    <input type="text" placeholder="请输入新密码">
+                    <input type="password" placeholder="请输入新密码">
                 </li>
                 <li>
                     <label for="">确认密码</label>
-                    <input type="text" placeholder="请确认密码">
+                    <input type="password" placeholder="请确认密码">
                 </li>
             </ul>
         </div>
