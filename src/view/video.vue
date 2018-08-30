@@ -1,7 +1,7 @@
 <template>
  <div class="video">
     <Mheader></Mheader>
-    <div class="warpper">   
+    <div class="warpper warpper-box">   
         <div class="ov">
             <div class="video-warpper">
                 <div class="video-box fl">

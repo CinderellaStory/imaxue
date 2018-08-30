@@ -1,67 +1,69 @@
 <template>
  <div class="accountbind">
     <Mheader></Mheader>
-    <div class="mw content">
-         <div class="nav">
-            <ul>
-              <router-link tag="li" to="userinfo">基本信息</router-link>
-              <router-link tag="li" to="accountbind" class="active">绑定账户</router-link>
-              <router-link tag="li" to="modifypsd">修改密码</router-link>
-          </ul>
-        </div>
-        <div class="userinfo-into">
-          <ul>
-            <li>
-              <div class="items">
-                <span class="title">密码</span>
-                <button>设置密码</button>
-              </div>
-              <p>用于保护账号信息和登录安全</p>
-            </li>
-            <li>
-              <div class="items">
-                <span class="title">邮箱</span>
-                <button>绑定邮箱</button>
-              </div>
-              <p>可用邮箱加密码登录，可用邮箱找回密码</p>
-            </li>
-            <li>
-              <div class="items">
-                <span class="title">手机</span>
-                <button>绑定手机</button>
-              </div>
-              <p>可用手机号加密码登录，可通过手机号找回密码</p>
-            </li>
-            <!-- <li>
-              <div class="items">
-                <span class="title">绑定第三方账号</span>
-              </div>
-              <p>用于保护账号信息和登录安全</p>
-            </li> -->
-          </ul>
-        </div>
-        <div class="bind">
-          <div class="title">绑定第三方账号</div>
-          <ul>
-            <li class="unbound">
-              <i class="iconfont icon-qq-copy"></i>
-              <span class="bind-style">QQ</span>
-              <span>未绑定</span>
-              <button @click="jump">绑定</button>
-            </li>
-            <li class="unbound">
-              <i class="iconfont icon-weixin-copy"></i>
-              <span class="bind-style">微信</span>
-              <span class="unbound-text">未绑定</span>
-              <button  @click="wechat">绑定</button>
-            </li>
-            <li class="bound">
-              <i class="iconfont icon-weibo"></i>
-              <span class="bind-style">微博</span>
-              <span class="already-bind">已绑定</span>
-              <button @click="weibo">解绑</button>
-            </li>
-          </ul>
+     <div class="warpper-box">
+        <div class="mw content">
+            <div class="nav">
+                <ul>
+                  <router-link tag="li" to="userinfo">基本信息</router-link>
+                  <router-link tag="li" to="accountbind" class="active">绑定账户</router-link>
+                  <router-link tag="li" to="modifypsd">修改密码</router-link>
+              </ul>
+            </div>
+            <div class="userinfo-into">
+              <ul>
+                <li>
+                  <div class="items">
+                    <span class="title">密码</span>
+                    <button>设置密码</button>
+                  </div>
+                  <p>用于保护账号信息和登录安全</p>
+                </li>
+                <li>
+                  <div class="items">
+                    <span class="title">邮箱</span>
+                    <button>绑定邮箱</button>
+                  </div>
+                  <p>可用邮箱加密码登录，可用邮箱找回密码</p>
+                </li>
+                <li>
+                  <div class="items">
+                    <span class="title">手机</span>
+                    <button>绑定手机</button>
+                  </div>
+                  <p>可用手机号加密码登录，可通过手机号找回密码</p>
+                </li>
+                <!-- <li>
+                  <div class="items">
+                    <span class="title">绑定第三方账号</span>
+                  </div>
+                  <p>用于保护账号信息和登录安全</p>
+                </li> -->
+              </ul>
+            </div>
+            <div class="bind">
+              <div class="title">绑定第三方账号</div>
+              <ul>
+                <li class="unbound">
+                  <i class="iconfont icon-qq-copy"></i>
+                  <span class="bind-style">QQ</span>
+                  <span>未绑定</span>
+                  <button @click="jump">绑定</button>
+                </li>
+                <li class="unbound">
+                  <i class="iconfont icon-weixin-copy"></i>
+                  <span class="bind-style">微信</span>
+                  <span class="unbound-text">未绑定</span>
+                  <button  @click="wechat">绑定</button>
+                </li>
+                <li class="bound">
+                  <i class="iconfont icon-weibo"></i>
+                  <span class="bind-style">微博</span>
+                  <span class="already-bind">已绑定</span>
+                  <button @click="weibo">解绑</button>
+                </li>
+              </ul>
+            </div>
         </div>
     </div>
     <Dialog></Dialog>

@@ -136,7 +136,7 @@ h2{
         font-size: 16px;
         }
     .list-container{
-        margin-top: 50px;
+        margin-top: 84px;
         width: 100%;
         ul{
             li{

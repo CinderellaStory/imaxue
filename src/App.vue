@@ -17,6 +17,9 @@ export default {
 .cursor,button,.iconfont{
   cursor: pointer;
 }
+.warpper-box{
+  margin-top:84px;
+}
 button{
   outline: none;
 }

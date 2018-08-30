@@ -1,33 +1,35 @@
 <template>
  <div class="accountbind">
     <Mheader></Mheader>
-    <div class="mw content">
-         <div class="nav">
-            <ul>
-              <router-link tag="li" to="userinfo">基本信息</router-link>
-              <router-link tag="li" to="accountbind">绑定账户</router-link>
-              <router-link tag="li" to="modifypsd" class="active">修改密码</router-link>
-          </ul>
-        </div>
-        <div class="modify">
-            <ul>
-                <li>
-                    <label for="">旧密码</label>
-                    <input type="password" placeholder="请输入旧密码">
-                </li>
-                <li>
-                    <label for="">新密码</label>
-                    <input type="password" placeholder="请输入新密码">
-                </li>
-                <li>
-                    <label for="">确认密码</label>
-                    <input type="password" placeholder="请确认密码">
-                </li>
+    <div class="warpper-box">
+        <div class="mw content">
+            <div class="nav">
+                <ul>
+                <router-link tag="li" to="userinfo">基本信息</router-link>
+                <router-link tag="li" to="accountbind">绑定账户</router-link>
+                <router-link tag="li" to="modifypsd" class="active">修改密码</router-link>
             </ul>
+            </div>
+            <div class="modify">
+                <ul>
+                    <li>
+                        <label for="">旧密码</label>
+                        <input type="password" placeholder="请输入旧密码">
+                    </li>
+                    <li>
+                        <label for="">新密码</label>
+                        <input type="password" placeholder="请输入新密码">
+                    </li>
+                    <li>
+                        <label for="">确认密码</label>
+                        <input type="password" placeholder="请确认密码">
+                    </li>
+                </ul>
+            </div>
+            <button>提交</button>
         </div>
-        <button>提交</button>
     </div>
-    </div>
+</div>
 </template>
 
 <script type="text/javascript">

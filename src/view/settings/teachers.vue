@@ -1,6 +1,6 @@
 <template>
  <div class="page">
-     讲师主页
+     讲师主页 warpper-box
  </div>
 </template>
 

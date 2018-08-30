@@ -2,7 +2,7 @@
  <div class="home">
      <Mheader></Mheader>
      <NavBar></NavBar>
-    <div class="banner">
+    <div class="banner warpper-box">
       <!-- <img src="../assets/banner03.png" alt=""> -->
     </div>
     <div class="Course-container">

@@ -1,32 +1,34 @@
 <template>
  <div class="fans">
      <Mheader></Mheader>
-     <div class="mw content">
-         <div class="nav">
-            <ul>
-                <router-link tag="li" to="follows">我的关注</router-link>
-                <router-link tag="li" to="fans" class="active">我的粉丝</router-link>
-                <router-link tag="li" to="collect">我的收藏</router-link>
-                <router-link tag="li" to="study">最近学习</router-link>
-            </ul>
-        </div>
-        <div class="fansinfo ov">
-            <ul>
-                <li v-for="(fan,index) in fans" :key="index">
-                    <div class="userlogo fl"><img src="../../assets/userlogo.png" alt=""></div>
-                    <div class="fansright fl">
-                        <p class="username">{{fan.username}}</p>
-                        <p class="job">{{fan.job}}</p>
-                        <p class="detail fl">
-                            <span class="fl">关注{{fan.fllows}}</span>
-                            <span class="fr">粉丝{{fan.fans}}</span>
-                        </p>
-                    </div>
-                    <div class="fansbtn fr">
-                        <button @click="problem1" v-text="fan.btn"></button>
-                    </div>
-                </li>
-            </ul>
+      <div class="warpper-box">
+        <div class="mw content">
+            <div class="nav">
+                <ul>
+                    <router-link tag="li" to="follows">我的关注</router-link>
+                    <router-link tag="li" to="fans" class="active">我的粉丝</router-link>
+                    <router-link tag="li" to="collect">我的收藏</router-link>
+                    <router-link tag="li" to="study">最近学习</router-link>
+                </ul>
+            </div>
+            <div class="fansinfo ov">
+                <ul>
+                    <li v-for="(fan,index) in fans" :key="index">
+                        <div class="userlogo fl"><img src="../../assets/userlogo.png" alt=""></div>
+                        <div class="fansright fl">
+                            <p class="username">{{fan.username}}</p>
+                            <p class="job">{{fan.job}}</p>
+                            <p class="detail fl">
+                                <span class="fl">关注{{fan.fllows}}</span>
+                                <span class="fr">粉丝{{fan.fans}}</span>
+                            </p>
+                        </div>
+                        <div class="fansbtn fr">
+                            <button @click="problem1" v-text="fan.btn"></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
      </div>
  </div>

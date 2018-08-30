@@ -1,7 +1,7 @@
 <template>
  <div class="myhome">
      <Mheader></Mheader>
-     <div class="myhome-header">
+     <div class="myhome-header warpper-box">
         <div class="mw ov">
              <div class="myhome-left fl">
                 <div class="logo fl"><img src="../../assets/userlogo.png" alt=""></div>

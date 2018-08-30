@@ -1,47 +1,49 @@
 <template>
  <div class="userinfo">
     <Mheader></Mheader>
+    <div class="warpper-box">
     <div class="mw content">
-      <div class="nav">
+        <div class="nav">
+            <ul>
+                <router-link tag="li" to="userinfo" class="active">基本信息</router-link>
+                <router-link tag="li" to="accountbind">绑定账户</router-link>
+                <router-link tag="li" to="modifypsd">修改密码</router-link>
+            </ul>
+        </div>
+        <div class="userinfo-into">
           <ul>
-              <router-link tag="li" to="userinfo" class="active">基本信息</router-link>
-              <router-link tag="li" to="accountbind">绑定账户</router-link>
-              <router-link tag="li" to="modifypsd">修改密码</router-link>
-          </ul>
-      </div>
-      <div class="userinfo-into">
-        <ul>
-          <li class="items">
-            <span class="fl title">头像</span>
-            <div class="avatar fl">
-              <img src="../../assets/userlogo.png" alt="">
-            </div>
-              <div class="avatar_info fl">
-                <p>支持 jpg、png 格式大小 5M 以内的图片</p>
-                <button>点击上传</button>
+            <li class="items">
+              <span class="fl title">头像</span>
+              <div class="avatar fl">
+                <img src="../../assets/userlogo.png" alt="">
               </div>
-          </li>
-          <li>
-            <span class="title">昵称</span>
-            <div class="info">请叫我小任性</div>
-          </li>
-          <li>
-            <span class="title">性别</span>
-            <div class="info">女</div>
-          </li>
-          <li>
-            <span class="title">城市</span>
-            <div class="info">广东</div>
-          </li>
-          <li>
-            <span class="title">职位</span>
-            <div class="info">Web前端开发</div>
-          </li>
-          <li>
-            <span class="title">个性签名</span>
-            <div class="info">学无止境，回头是岸。</div>
-          </li>
-        </ul>
+                <div class="avatar_info fl">
+                  <p>支持 jpg、png 格式大小 5M 以内的图片</p>
+                  <button>点击上传</button>
+                </div>
+            </li>
+            <li>
+              <span class="title">昵称</span>
+              <div class="info">请叫我小任性</div>
+            </li>
+            <li>
+              <span class="title">性别</span>
+              <div class="info">女</div>
+            </li>
+            <li>
+              <span class="title">城市</span>
+              <div class="info">广东</div>
+            </li>
+            <li>
+              <span class="title">职位</span>
+              <div class="info">Web前端开发</div>
+            </li>
+            <li>
+              <span class="title">个性签名</span>
+              <div class="info">学无止境，回头是岸。</div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
  </div>

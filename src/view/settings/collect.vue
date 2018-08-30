@@ -1,36 +1,38 @@
 <template>
  <div class="collect">
      <Mheader></Mheader>
-     <div class="mw content">
-         <div class="nav">
-            <ul>
-                <router-link tag="li" to="follows">我的关注</router-link>
-                <router-link tag="li" to="fans">我的粉丝</router-link>
-                <router-link tag="li" to="collect" class="active">我的收藏</router-link>
-                <router-link tag="li" to="study">最近学习</router-link>
-            </ul>
-        </div>
-        <div class="followsinfo ov">
-            <ul>
-                <li v-for="(fan,index) in fans" :key="index">
-                    <div class="userlogo fl"><img src="../../assets/1.jpg" alt=""></div>
-                    <div class="fansright fl">
-                        <p class="coursename">{{fan.coursename}}</p>
-                        <p class="username">
-                            <span>讲师：{{fan.username}}</span>
-                            <button>关注</button>
-                        </p>
-                        <p class="videotime">
-                            <span class="fl">视频时长：{{fan.videotime}}</span>
-                            <span class="fr">已观看：{{fan.viewed}}</span>
-                        </p>
-                        <p class="collectnumber fl">收藏人数：{{fan.collectnumber}}人</p>
-                    </div>
-                    <div class="fansbtn fr">
-                        <button>{{fan.btn}}</button>
-                    </div>
-                </li>
-            </ul>
+      <div class="warpper-box">
+        <div class="mw content">
+            <div class="nav">
+                <ul>
+                    <router-link tag="li" to="follows">我的关注</router-link>
+                    <router-link tag="li" to="fans">我的粉丝</router-link>
+                    <router-link tag="li" to="collect" class="active">我的收藏</router-link>
+                    <router-link tag="li" to="study">最近学习</router-link>
+                </ul>
+            </div>
+            <div class="followsinfo ov">
+                <ul>
+                    <li v-for="(fan,index) in fans" :key="index">
+                        <div class="userlogo fl"><img src="../../assets/1.jpg" alt=""></div>
+                        <div class="fansright fl">
+                            <p class="coursename">{{fan.coursename}}</p>
+                            <p class="username">
+                                <span>讲师：{{fan.username}}</span>
+                                <button>关注</button>
+                            </p>
+                            <p class="videotime">
+                                <span class="fl">视频时长：{{fan.videotime}}</span>
+                                <span class="fr">已观看：{{fan.viewed}}</span>
+                            </p>
+                            <p class="collectnumber fl">收藏人数：{{fan.collectnumber}}人</p>
+                        </div>
+                        <div class="fansbtn fr">
+                            <button>{{fan.btn}}</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
      </div>
  </div>

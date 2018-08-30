@@ -74,13 +74,14 @@ body{
   position: relative;
 }
 .navbar{
-  position: absolute;
-  left: 0;
+  position: fixed;
+  top:84px;
+  left: 0;box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.1);
   z-index:1;
   background: #fff;
   width: 230px;
   height: 800px;
-   overflow:auto;
+  //overflow-y:scroll;
   ul{
     li{
       height: 40px;
@@ -101,11 +102,13 @@ h3{
   font-weight: normal;
   margin: 20px 0;
 }
-  .header{
+  .header{top: 0;
+  left:0;
     width: 100%;
     background: #000;
     height: 84px;    min-width: 1200px;
-    display: flex;
+    display: flex;    position: fixed;
+    z-index: 3;
     align-items: center;
   }
   .logo{

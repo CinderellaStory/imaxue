@@ -1,7 +1,7 @@
 <template>
  <div class="details">
     <Mheader></Mheader>
-    <div class="details-bg">
+    <div class="details-bg warpper-box">
         <p class="course-name mw">vue2.0仿京东商场实战课程</p>
         <div class="details-content">
             <div class="details-info">
