@@ -14,8 +14,8 @@
                 <div class="price">￥299.99</div>
                 <div class="btn">
                     <button>
-                        <span>立即购买</span>
-                        <i class="iconfont icon-msnui-cart"></i>
+                        <router-link to="sureorder">立即购买</router-link>
+                        <router-link to="cart"><i class="iconfont icon-msnui-cart"></i></router-link>
                     </button>
                 </div>
             </div>
