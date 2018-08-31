@@ -45,6 +45,9 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="checkbtn">
+                            <button>查看全部</button>
+                        </div>
                     </div>
                 </div>
                 <div class="teachers-box fl">
@@ -219,11 +222,11 @@ import Mheader from '@/components/Mheader'
             margin-top: 20px;
             .comment-area{
                 border: 1px solid #BBBBBB;
-                margin: 24px;
+                margin: 24px 45px;
                 text-align: left;
                 background: #E6E6E6;
                 border-radius: 10px;
-                padding: 10px 20px;
+                padding: 20px;
                 align-items: center;
                 display: flex;
                 img{
@@ -236,9 +239,9 @@ import Mheader from '@/components/Mheader'
                 textarea{
                     height: 80px;
                     resize:none;
-                    width: 88%;
+                    width: 90%;
                     color: #333;
-                    margin: 12px;
+                    margin: 12px 12px 12px 20px;
                     outline: none;
                     padding: 10px;
                     border-radius: 10px;
@@ -246,12 +249,12 @@ import Mheader from '@/components/Mheader'
                 }
             }
             .comment-box{
-                padding: 24px;
+                padding: 24px 45px;
                 align-items: center;
                 display: flex;
                 ul{
                     li{
-                       border-bottom: 1px solid #BBBBBB;
+                       border-bottom: 1px solid #e1e1e1;
                        overflow: hidden;
                        padding-bottom: 14px;
                        margin-bottom:20px; 
@@ -290,6 +293,14 @@ import Mheader from '@/components/Mheader'
                             }
                         }
                     }
+                }
+            }
+            .checkbtn{
+                margin-bottom: 30px;
+                button{
+                    border: 0;
+                    background: 0;
+                    color: #568587;
                 }
             }
         }
