@@ -1,33 +1,31 @@
 <template>
  <div class="accountbind">
     <Mheader></Mheader>
-    <div class="warpper-box">
-        <div class="mw content">
-            <div class="nav">
-                <ul>
-                <router-link tag="li" to="userinfo">基本信息</router-link>
-                <router-link tag="li" to="accountbind">绑定账户</router-link>
-                <router-link tag="li" to="modifypsd" class="active">修改密码</router-link>
-            </ul>
-            </div>
-            <div class="modify">
-                <ul>
-                    <li>
-                        <label for="">旧密码</label>
-                        <input type="password" placeholder="请输入旧密码">
-                    </li>
-                    <li>
-                        <label for="">新密码</label>
-                        <input type="password" placeholder="请输入新密码">
-                    </li>
-                    <li>
-                        <label for="">确认密码</label>
-                        <input type="password" placeholder="请确认密码">
-                    </li>
-                </ul>
-            </div>
-            <button>提交</button>
+    <div class="mw content">
+        <div class="nav">
+            <ul>
+            <router-link tag="li" to="userinfo">基本信息</router-link>
+            <router-link tag="li" to="accountbind">绑定账户</router-link>
+            <router-link tag="li" to="modifypsd" class="active">修改密码</router-link>
+        </ul>
         </div>
+        <div class="modify">
+            <ul>
+                <li>
+                    <label for="">旧密码</label>
+                    <input type="password" placeholder="请输入旧密码">
+                </li>
+                <li>
+                    <label for="">新密码</label>
+                    <input type="password" placeholder="请输入新密码">
+                </li>
+                <li>
+                    <label for="">确认密码</label>
+                    <input type="password" placeholder="请确认密码">
+                </li>
+            </ul>
+        </div>
+        <button>提交</button>
     </div>
 </div>
 </template>
@@ -50,7 +48,7 @@ import Mheader from '@/components/Mheader'
 <style scoped lang="less">
 .mw{
     width: 1000px;
-    margin: 45px auto;
+    margin: 150px auto;
 }
 .nav{
     margin: 10px 0 0 0;
@@ -73,13 +71,14 @@ import Mheader from '@/components/Mheader'
   background: #fff;
   box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.1);
   padding: 20px 30px 60px 30px;
+  min-height: 640px;
   }
 
 .modify{
-    margin-top: 45px;
+    margin-top: 50px;
     ul{
         li{
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             label{
                 width: 100px;
                 text-align: right;
@@ -87,7 +86,7 @@ import Mheader from '@/components/Mheader'
                 margin-right: 10px;
             }
             input{
-                width: 400px;
+                width: 500px;
                 border: 1px solid #BBBBBB;
                 padding-left: 15px;
                 height: 32px;

@@ -1,7 +1,6 @@
 <template>
  <div class="userinfo">
     <Mheader></Mheader>
-    <div class="warpper-box">
     <div class="mw content">
         <div class="nav">
             <ul>
@@ -46,7 +45,6 @@
         </div>
       </div>
     </div>
- </div>
 </template>
 
 <script type="text/javascript">
@@ -67,7 +65,7 @@ import Mheader from '@/components/Mheader'
 <style scoped lang="less">
 .mw{
     width: 1000px;
-    margin: 45px auto;
+    margin: 150px auto;
 }
 .nav{
     margin: 10px 0 0 0;
@@ -87,6 +85,7 @@ import Mheader from '@/components/Mheader'
 }
 
 .content{
+  min-height: 640px;
   background: #fff;
   box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.1);
   padding: 20px 30px 60px 30px;

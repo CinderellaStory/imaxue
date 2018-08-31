@@ -1,7 +1,6 @@
 <template>
  <div class="fans">
      <Mheader></Mheader>
-      <div class="warpper-box">
         <div class="mw content">
             <div class="nav">
                 <ul>
@@ -31,7 +30,6 @@
             </div>
         </div>
      </div>
- </div>
 </template>
 
 <script type="text/javascript">
@@ -107,7 +105,7 @@ Mheader
 <style scoped lang="less">
 .mw{
     width: 1000px;
-    margin: 45px auto;
+    margin: 150px auto;
 }
 
 .content{
@@ -116,7 +114,7 @@ Mheader
   padding: 20px 30px 60px 30px;
   }
 .nav{
-    margin: 50px 0 30px 0;
+    margin: 10px 0 30px 0;
     ul{
         overflow: hidden;
         border-bottom:1px solid #BBBBBB; 

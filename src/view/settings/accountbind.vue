@@ -1,7 +1,6 @@
 <template>
  <div class="accountbind">
     <Mheader></Mheader>
-     <div class="warpper-box">
         <div class="mw content">
             <div class="nav">
                 <ul>
@@ -65,7 +64,6 @@
               </ul>
             </div>
         </div>
-    </div>
     <Dialog></Dialog>
  </div>
 </template>
@@ -100,7 +98,7 @@ import Dialog from '@/components/Dialog'
 <style scoped lang="less">
 .mw{
     width: 1000px;
-    margin: 45px auto;
+    margin: 150px auto;
 }
 button{
     padding: 6px 16px;
@@ -155,6 +153,7 @@ button{
   background: #fff;
   box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.1);
   padding: 20px 30px 60px 30px;
+  min-height: 640px;
   }
 
   
@@ -191,13 +190,14 @@ button{
     margin-top: 20px;
     border-bottom: 1px solid #d9dde1;
     ul{
-        margin: 10px 0;
+        margin: 20px 0;
       li{
        height: 50px;
-          display: flex;
-          align-items: center;
-          .iconfont{
-          vertical-align: middle;
+       margin: 10px 0;
+        display: flex;
+        align-items: center;
+        .iconfont{
+        vertical-align: middle;
         }
         .icon-weixin-copy{
           color: #259B24;

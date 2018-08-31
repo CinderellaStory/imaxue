@@ -1,7 +1,6 @@
 <template>
  <div class="collect"> 
      <Mheader></Mheader>
-     <div class="warpper-box">
         <div class="mw content"> 
             <div class="nav">
                 <ul>
@@ -34,7 +33,6 @@
                 </ul>
             </div>
         </div>
-     </div>
  </div>
 </template>
 
@@ -97,7 +95,7 @@ import Mheader from '@/components/Mheader'
 <style scoped lang="less">
 .mw{
     width: 1000px;
-    margin: 45px auto;
+    margin: 150px auto;
 }
 
 .content{
@@ -107,7 +105,7 @@ import Mheader from '@/components/Mheader'
   }
 
 .nav{
-    margin: 50px 0 30px 0;
+    margin: 10px 0 30px 0;
     ul{
         overflow: hidden;
         border-bottom:1px solid #BBBBBB; 
