@@ -24,14 +24,38 @@
                 <p class="amount">商品总金额：<span>￥299.99</span></p>
               </div>
               <div class="fl wechat">
-                <button>微信支付</button>
+                <button @click="wechatpay">微信支付</button>
               </div>
               <div class="fr alipay">
-                <button>支付宝支付</button>
+                <button @click="alipay">支付宝支付</button>
               </div>
             </div>
               <p class="notice"><i class="iconfont icon-gantanhao"></i>请在22小时30分钟 以内支付完成，如未完成此订单将自动关闭。需重新购买！</p>
         </div>
+    </div>
+    <div class="wechat-dialog" v-show="show">
+      <div class="dialog_bg"></div>
+      <div class="wechat-dialog-container">
+        <div class="title">
+          {{wechat}}<i class="iconfont icon-delete" @click="CloseDialog"></i>
+        </div>
+        <div class="wechat-box">
+          <img src="../assets/wechat.jpg" alt="">
+        </div>
+        <p>微信支付</p>
+      </div>
+    </div>
+    <div class="alipay-dialog" v-show="alipayshow">
+      <div class="dialog_bg"></div>
+      <div class="wechat-dialog-container">
+        <div class="title">
+          {{wechat}}<i class="iconfont icon-delete" @click="CloseDialog"></i>
+        </div>
+        <div class="wechat-box">
+          <img src="../assets/wechat.jpg" alt="">
+        </div>
+        <p>支付宝支付</p>
+      </div>
     </div>
  </div>
 </template>
@@ -42,6 +66,9 @@ import Mheader from '@/components/Mheader'
   export default {
    data() {
      return {
+       show:false,
+       alipayshow:false,
+       wechat:'微信付款',
        items:[
         {
            courseneme:'全网最热Python3入门+进阶 更快上手实际开发',
@@ -56,6 +83,18 @@ import Mheader from '@/components/Mheader'
            courseprice:333.33
         }
        ]
+      }
+  },
+  methods:{
+    wechatpay(){
+      this.show = true;
+    },
+    alipay(){
+      this.alipayshow = true;
+    },
+     CloseDialog(){
+        this.show = false;
+        this.alipayshow = false;
       }
   },
    components: {
@@ -169,6 +208,88 @@ button{
       color: #FF9800;
       font-size: 12px;
       float: right;
+    }
+  }
+  .wechat-dialog{
+    .dialog_bg{
+      background: #000;
+      opacity: 0.75;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .wechat-dialog-container{
+      text-align: center;
+      width: 420px;
+      padding-bottom: 30px;
+      background: #fff;
+      top: 30%;
+      border-radius: 10px;
+      left: 38%;
+      position: absolute;
+      box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.1);
+      .icon-delete{
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        top: 10px;
+    }
+     .title{
+          border-radius: 10px 10px 0 0;
+          padding: 14px 20px; 
+          color: #fff;
+          position: relative;
+          text-align: center;
+          background: #6CB6FD;
+          border-bottom: 1px solid #3E95E5;
+          padding-bottom: 10px;
+      }
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+  .alipay-dialog{
+    .dialog_bg{
+      background: #000;
+      opacity: 0.75;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .wechat-dialog-container{
+      text-align: center;
+      width: 420px;
+      padding-bottom: 30px;
+      background: #fff;
+      top: 30%;
+      border-radius: 10px;
+      left: 38%;
+      position: absolute;
+      box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.1);
+      .icon-delete{
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        top: 10px;
+    }
+     .title{
+          border-radius: 10px 10px 0 0;
+          padding: 14px 20px; 
+          color: #fff;
+          position: relative;
+          text-align: center;
+          background: #6CB6FD;
+          border-bottom: 1px solid #3E95E5;
+          padding-bottom: 10px;
+      }
+      p{
+        font-size: 20px;
+      }
     }
   }
 </style>
