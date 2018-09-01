@@ -37,7 +37,7 @@
                                         <p class="commentator">{{comment.commentator}}</p>
                                         <p class="comment-content">{{comment.content}}</p>
                                         <p>
-                                            <span><i class="iconfont icon-dianzan"></i>{{comment.like}}人</span>
+                                            <span @click="like(n)" :class="{current:n==comment.isLike}"><i class="iconfont icon-dianzan"></i>{{comment.like}}人</span>
                                             <span><i class="iconfont icon-yanjing-shi"></i>{{comment.watch}}人</span>
                                             <span><i class="iconfont icon-pinglun"></i>{{comment.number}}人</span>
                                         </p>
@@ -147,41 +147,54 @@ import Mheader from '@/components/Mheader'
                 content:"这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号",
                 like:2344,
                 watch:1213,
-                number:3223
+                number:3223,
+                isLike:false
              },
              {
                 commentator:'Anne',
                 content:"这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号",
                 like:111,
                 watch:3223,
-                number:3232323
+                number:3232323,
+                isLike:false
              },
              {
                 commentator:'Anne',
                 content:"这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号",
                 like:111,
                 watch:3223,
-                number:3232323
+                number:3232323,
+                isLike:false
              },
              {
                 commentator:'Anne',
                 content:"这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号这里最多不能超过两行，超过两行就隐藏，显示省略号",
                 like:111,
                 watch:3223,
-                number:3232323
+                number:3232323,
+                isLike:false
              }
          ]
       }
   },
   methods:{
       collect(){
-        if(this.message=="收藏"){
-            this.message="取消";
-            this.isActive=true;
+        if(this.message == "收藏"){
+            this.message = "取消";
+            this.isActive = true;
         }else{
-            this.message="收藏"
-            this.isActive=false;
+            this.message = "收藏"
+            this.isActive = false;
         }
+      },
+      like(n){
+            if(this.comments[n].isLike == true){
+                this.comments[n].isLike = false;
+                this.comments[n].like+=1;
+            }else{
+                 this.comments[n].isLike = true;
+                 this.comments[n].like-=1;
+            }
       }
   },
    components: {
@@ -198,7 +211,7 @@ import Mheader from '@/components/Mheader'
     vertical-align: middle;
     margin-right: 4px;
 }
-.active{
+.active,.current i{
     color: red;
 }
 .video-warpper{
@@ -291,7 +304,6 @@ import Mheader from '@/components/Mheader'
                                 line-height: 26px;
                                 span{
                                     margin-right: 20px;
-                                    color: #c3c3c3;
                                 }
                                 &.commentator{
                                     font-weight: bold;
