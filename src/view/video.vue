@@ -17,8 +17,8 @@
                             <span>
                                 1234人观看
                             </span>
-                            <span class="cursor collect">
-                                <i class="iconfont icon-xingzhuanggongnengtubiao-"></i>收藏
+                            <span class="cursor collect" :class="{active:isActive}" @click="collect">
+                                <i class="iconfont icon-xingzhuanggongnengtubiao-"></i>{{message}}
                             </span>
                         </div>
                     </div>
@@ -113,6 +113,8 @@ import Mheader from '@/components/Mheader'
   export default {
    data() {
      return {
+         isActive:false,
+         message:"收藏",
          items:[
             {
                 coursename:'Vue2.0仿京东商场实战课程',
@@ -171,6 +173,17 @@ import Mheader from '@/components/Mheader'
          ]
       }
   },
+  methods:{
+      collect(){
+        if(this.message=="收藏"){
+            this.message="取消";
+            this.isActive=true;
+        }else{
+            this.message="收藏"
+            this.isActive=false;
+        }
+      }
+  },
    components: {
      Mheader
    }
@@ -184,6 +197,9 @@ import Mheader from '@/components/Mheader'
 .iconfont{
     vertical-align: middle;
     margin-right: 4px;
+}
+.active{
+    color: red;
 }
 .video-warpper{
     width: 90%;
