@@ -16,14 +16,14 @@
             <div class="course-item">
               <ul>
                 <li v-for="(item,index) in items" :key="index">
-                  <div class="item-1 fl"> <input type="checkbox" v-model="items.SigleCheck"></div>
+                  <div class="item-1 fl"> <input type="checkbox" v-model="SigleCheck" :value="item.coursename"></div>
                   <div class="item-2 fl">
                     <div class="fl course-img">
                         <img src="../assets/web.png" alt="">
                     </div>
                     <div class="fl">
-                        <p class="course-name">{{item.courseneme}}</p>
-                        <p class="teachers-name">{{item.teachersneme}}</p>
+                        <p class="course-name">{{item.coursename}}</p>
+                        <p class="teachers-name">{{item.teachersname}}</p>
                         <p class="videos-times">{{item.videostimes}}</p>
                     </div>
                   </div>
@@ -61,22 +61,21 @@ import Dialog from '@/components/Dialog'
    data() {
      return {
        TotalAmount:0,  //总金额
+       SigleCheck: [],
        checked: false,
        sendVal:false,
        items:[
         {
-           courseneme:'111111111全网最热Python3入门+进阶 更快上手实际开发',
-           teachersneme:'请叫我小任性',
+           coursename:'111111111全网最热Python3入门+进阶 更快上手实际开发',
+           teachersname:'请叫我小任性',
            videostimes:'视频时长：一个小时20分',
-           courseprice:333.33,
-           SigleCheck: false
+           courseprice:2222.1
         },
         {
-           courseneme:'222222全网最热Python3入门+进阶 更快上手实际开发',
-           teachersneme:'请叫我小任性',
+           coursename:'222222全网最热Python3入门+进阶 更快上手实际开发',
+           teachersname:'请叫我小任性',
            videostimes:'视频时长：一个小时20分',
-           courseprice:333.33,
-           SigleCheck: false
+           courseprice:333.33
         }
        ]
       }
@@ -91,44 +90,29 @@ import Dialog from '@/components/Dialog'
       sureorder(){
         var _this = this
       _this.$router.push({
-        path:'q/sureorder'
+        path:'/sureorder'
          })
       },
-    countTotalMoney(){
-      var _this = this;
-      var TotalAmount = 0;
-      for(var i= 0; i < this.items.length;i++){
-         if(this.items.SigleCheck == true){
-           console.log(this.items[i].courseprice)
-            this.TotalAmount  += this.items[i].courseprice;
-      }else{
-        return;
-      }
-      }
-        return this.TotalAmount;
-    },
      Delete(index){
           this.items.splice(index,1);
       },
-    AllCheck(){
-      if(this.checked){
-        this.items.SigleCheck = true;
+    AllCheck(item){
+      this.SigleCheck=[]
+      if(this.checked == true){
+        this.items.forEach((value,index) => {
+          this.SigleCheck.push(value.coursename)
+        });
       }
-      else{
-        this.items.SigleCheck = false;
-      }
-        // this.countTotalMoney();
     }
   },
   watch:{
 		SigleCheck: {
 			handler(){
         if (this.SigleCheck.length == this.items.length) {
-        console.log("全选");
-        this.items.SigleCheck = true;
+        this.checked = true;
 			} else {
-        console.log("单选");
-        this.items.SigleCheck = false;
+        console.log(this.items[1].courseprice);
+        this.checked = false;
 			}
     },
     deep:true
