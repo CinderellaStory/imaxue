@@ -1,20 +1,15 @@
-# video_website
+# 码学
 
-> A Vue.js project
+> 程序员的专属之家
 
 ## Build Setup
 
 ``` bash
-# install dependencies
-npm install  //安装依赖
-
-# serve with hot reload at localhost:8080
-npm run dev  //运行项目
-
-# build for production with minification
-npm run build   //打包文件
+1. npm install      //安装依赖
+2. npm run dev     //运行项目
+3. npm run build   //打包项目
 ```
-
+## 传送门：
 - 项目入口：https://cinderellastory.github.io/imaxue/dist/index.html#/  
 - 原型图：https://cinderellastory.github.io/imaxue/prototype/index.html  
 
