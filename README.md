@@ -13,7 +13,7 @@ npm run dev  //运行项目
 
 # build for production with minification
 npm run build   //打包文件
-
+```
 - 项目入口：https://cinderellastory.github.io/imaxue/dist/index.html#/  
 - 原型图：https://cinderellastory.github.io/imaxue/prototype/index.html  
 ## 功能需求：
