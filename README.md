@@ -14,12 +14,6 @@ npm run dev  //运行项目
 # build for production with minification
 npm run build   //打包文件
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
 - 项目入口：https://cinderellastory.github.io/imaxue/dist/index.html#/  
 - 原型图：https://cinderellastory.github.io/imaxue/prototype/index.html  
 ## 功能需求：
